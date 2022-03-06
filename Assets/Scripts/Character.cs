@@ -26,22 +26,26 @@ public class Character : MonoBehaviour
         Vector3 pos = transform.position;
         if (Input.GetKey(KeyCode.W)) {
             currentState = CharacterState.WALKING_UP;
-            transform.position = new Vector3(pos.x,pos.y + speed * Time.deltaTime,pos.z);
+            pos = new Vector3(pos.x,pos.y + speed * Time.deltaTime,pos.z);
+            transform.position = pos;
         }
         if (Input.GetKey(KeyCode.S))
         {
             currentState = CharacterState.WALKING_DOWN;
-            transform.position = new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z);
+            pos = new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z);
+            transform.position = pos;
         }
         if (Input.GetKey(KeyCode.A))
         {
             currentState = CharacterState.WALKING_LEFT;
-            transform.position = new Vector3(pos.x - speed * Time.deltaTime,pos.y, pos.z);
+            pos = new Vector3(pos.x - speed * Time.deltaTime,pos.y, pos.z);
+            transform.position = pos;
         }
         if (Input.GetKey(KeyCode.D))
         {
             currentState = CharacterState.WALKING_RIGHT;
-            transform.position = new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z);
+            pos = new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z);
+            transform.position = pos;
         }
 
 
@@ -54,7 +58,7 @@ public class Character : MonoBehaviour
         }
         print(currentState);
 
-        animator.SetInteger("CharacterState", (int)currentState);
+        animator.SetInteger("CharacterState", (int) currentState);
     }
 
 }

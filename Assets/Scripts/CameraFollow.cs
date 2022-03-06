@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     private bool turnedRight = true;
+    private bool turnedUp = true;
     [SerializeField] private Transform target;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,15 @@ public class CameraFollow : MonoBehaviour
         {
             turnedRight = true;
         }
+        if (Input.GetKey(KeyCode.S) && turnedUp) {
+            turnedUp = false;
+        }
+        if (Input.GetKey(KeyCode.W) && !turnedUp)
+        {
+            turnedUp = true;
+        }
         currentPos.x = !turnedRight ? smoothPosition.x-1 : smoothPosition.x +1;
+        currentPos.y = !turnedUp ? smoothPosition.y-0.07f : smoothPosition.y +0.07f;
         transform.position = currentPos;
     }
 }
