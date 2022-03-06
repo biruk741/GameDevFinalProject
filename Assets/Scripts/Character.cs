@@ -26,32 +26,28 @@ public class Character : MonoBehaviour
         Vector3 pos = transform.position;
         if (Input.GetKey(KeyCode.W)) {
             currentState = CharacterState.WALKING_UP;
-            pos = new Vector3(pos.x,pos.y + speed * Time.deltaTime,pos.z);
-            transform.position = pos;
+            moveCharacter(currentState, transform, speed);
         }
         if (Input.GetKey(KeyCode.S))
         {
             currentState = CharacterState.WALKING_DOWN;
-            pos = new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z);
-            transform.position = pos;
+            moveCharacter(currentState, transform, speed);
         }
         if (Input.GetKey(KeyCode.A))
         {
             currentState = CharacterState.WALKING_LEFT;
-            pos = new Vector3(pos.x - speed * Time.deltaTime,pos.y, pos.z);
-            transform.position = pos;
+            moveCharacter(currentState, transform, speed);
         }
         if (Input.GetKey(KeyCode.D))
         {
             currentState = CharacterState.WALKING_RIGHT;
-            pos = new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z);
-            transform.position = pos;
+            moveCharacter(currentState, transform, speed);
         }
 
 
         if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S)) {
-            currentState = currentState ==
-                CharacterState.WALKING_UP ? CharacterState.FACING_UP :
+            currentState = 
+                currentState == CharacterState.WALKING_UP ? CharacterState.FACING_UP :
                 currentState == CharacterState.WALKING_DOWN ? CharacterState.FACING_DOWN :
                 currentState == CharacterState.WALKING_LEFT ? CharacterState.FACING_LEFT :
                 currentState == CharacterState.WALKING_RIGHT ? CharacterState.FACING_RIGHT : currentState;
@@ -60,5 +56,13 @@ public class Character : MonoBehaviour
 
         animator.SetInteger("CharacterState", (int) currentState);
     }
-
+    public static void moveCharacter(CharacterState currentState, Transform transform, float speed) {
+        Vector3 pos = transform.position;
+        pos =
+                currentState == CharacterState.WALKING_UP ? new Vector3(pos.x, pos.y + speed * Time.deltaTime, pos.z) :
+                currentState == CharacterState.WALKING_DOWN ? new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z) :
+                currentState == CharacterState.WALKING_LEFT ? new Vector3(pos.x - speed * Time.deltaTime, pos.y, pos.z) :
+                currentState == CharacterState.WALKING_RIGHT ? new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z) : Vector3.zero;
+        transform.position = pos;
+    }
 }
