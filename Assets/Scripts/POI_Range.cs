@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class POI : MonoBehaviour
+public class POI_Range : MonoBehaviour
 {
-    public TMPro.TMP_Text poi_name_display;
-    public TMPro.TMP_Text description_display;
-
-    public string poiName;
-    public string poiDescription;
 
     public Animator animator;
 
@@ -16,13 +11,9 @@ public class POI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        poi_name_display.text = poiName;
-        description_display.text = poiDescription;
 
-        //animator.SetBool("showing", false);
+        animator.SetBool("showing", false);
     }
-
-    /*
     private void OnTriggerStay2D(Collider2D other)
     {
         print("Collided with " + other.gameObject.name);
@@ -39,5 +30,4 @@ public class POI : MonoBehaviour
             animator.SetBool("showing", false);
         }
     }
-    */
 }
