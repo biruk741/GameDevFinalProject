@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     public CharacterState currentState = CharacterState.FACING_DOWN;
     private Animator animator;
     public float speed = 40;
+    public AudioSource walkingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -51,12 +52,14 @@ public class Character : MonoBehaviour
                 currentState == CharacterState.WALKING_DOWN ? CharacterState.FACING_DOWN :
                 currentState == CharacterState.WALKING_LEFT ? CharacterState.FACING_LEFT :
                 currentState == CharacterState.WALKING_RIGHT ? CharacterState.FACING_RIGHT : currentState;
+            walkingSound.Stop();
+
         }
         print(currentState);
 
         animator.SetInteger("CharacterState", (int) currentState);
     }
-    public static void moveCharacter(CharacterState currentState, Transform transform, float speed) {
+    public void moveCharacter(CharacterState currentState, Transform transform, float speed) {
         Vector3 pos = transform.position;
         pos =
                 currentState == CharacterState.WALKING_UP ? new Vector3(pos.x, pos.y + speed * Time.deltaTime, pos.z) :
@@ -64,5 +67,6 @@ public class Character : MonoBehaviour
                 currentState == CharacterState.WALKING_LEFT ? new Vector3(pos.x - speed * Time.deltaTime, pos.y, pos.z) :
                 currentState == CharacterState.WALKING_RIGHT ? new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z) : Vector3.zero;
         transform.position = pos;
+        if(!walkingSound.isPlaying) walkingSound.Play();
     }
 }
