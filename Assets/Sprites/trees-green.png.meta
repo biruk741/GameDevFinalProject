@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 3182378085272899497
     second: trees-green_5
+  - first:
+      213: 4173911163362345368
+    second: trees-green_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,6 +245,27 @@ TextureImporter:
       bones: []
       spriteID: 9afcda1f1041a2c20800000000000000
       internalID: 3182378085272899497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-green_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 319
+        width: 173
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8910048b616bce930800000000000000
+      internalID: 4173911163362345368
       vertices: []
       indices: 
       edges: []
