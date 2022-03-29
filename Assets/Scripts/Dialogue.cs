@@ -9,5 +9,7 @@ public class Dialogue
     public string[] sentences;
 
 
-    public string characterName;
+    public string character1Name;
+    public string character2Name;
+
 }
