@@ -11,7 +11,6 @@ public class DialogManager : MonoBehaviour
 	public Animator animator;
 
 	private Queue<string> sentences;
-	private Dialogue dialogue;
 
 	// Use this for initialization
 	void Start()
@@ -21,8 +20,9 @@ public class DialogManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue dialogue)
 	{
-		this.dialogue = dialogue;
 		animator.SetBool("isOpen", true);
+
+		nameText.text = dialogue.characterName;
 
 		sentences.Clear();
 
@@ -43,10 +43,8 @@ public class DialogManager : MonoBehaviour
 		}
 
 		string sentence = sentences.Dequeue();
-		nameText.text = sentence[0].Equals('2') ? dialogue.character2Name:  dialogue.character1Name;
 		StopAllCoroutines();
-		print("sentence[0]==" + sentence[0] + " and sentence[0].Equals('1')== " + sentence[0].Equals("1"));
-		StartCoroutine(TypeSentence(!sentence[0].Equals('1') && !sentence[0].Equals('2') ? sentence : sentence.Substring(1, sentence.Length - 1)));
+		StartCoroutine(TypeSentence(sentence));
 	}
 
 	IEnumerator TypeSentence(string sentence)
