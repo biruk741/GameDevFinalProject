@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Entrance : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Entrance : MonoBehaviour
     int direction = 1;
     public BoxCollider2D playerCollider;
     public TMPro.TMP_Text UIText;
+    public string sceneName;
     bool isActive = false;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class Entrance : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isActive) {
             print("Entering Building");
-            LoadingScreen.LoadScene("MainMenuScene");
+            SceneManager.LoadScene(sceneName);
         }
     }
 

@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NPC : MonoBehaviour
+{
+    public enum CharacterState { 
+        WALKING_UP, WALKING_DOWN,WALKING_LEFT,WALKING_RIGHT,
+        FACING_UP, FACING_DOWN, FACING_LEFT, FACING_RIGHT
+    }
+
+    public CharacterState currentState = CharacterState.FACING_DOWN;
+    private Animator animator;
+    public float speed = 40;
+    public AudioSource walkingSound;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        currentState = CharacterState.FACING_DOWN;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        print(currentState);
+
+        //animator.SetInteger("CharacterState", (int) currentState);
+    }
+    public void moveCharacter(CharacterState currentState, Transform transform, float speed) {
+        Vector3 pos = transform.position;
+        pos =
+                currentState == CharacterState.WALKING_UP ? new Vector3(pos.x, pos.y + speed * Time.deltaTime, pos.z) :
+                currentState == CharacterState.WALKING_DOWN ? new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z) :
+                currentState == CharacterState.WALKING_LEFT ? new Vector3(pos.x - speed * Time.deltaTime, pos.y, pos.z) :
+                currentState == CharacterState.WALKING_RIGHT ? new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z) : Vector3.zero;
+        transform.position = pos;
+        if(!walkingSound.isPlaying) walkingSound.Play();
+    }
+}
