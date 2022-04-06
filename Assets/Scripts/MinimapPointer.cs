@@ -18,17 +18,14 @@ public class MinimapPointer : MonoBehaviour
     void FixedUpdate()
     {
         destinationProvided = destination != null;
-        if (destinationProvided) {
+        if (destinationProvided)
+        {
+            if (!gameObject.activeInHierarchy) gameObject.SetActive(true);
             Vector3 vector = (player.position - destination.position).normalized;
             float angleInRadians = Mathf.Atan2(vector.y, vector.x);
             double angleInDegrees = (180 / System.Math.PI) * angleInRadians;
-            Quaternion rotation = transform.rotation;
-
-            print("vector.x = " + vector.x + " and vector.y = " + vector.y + " y/x = " + (vector.x/vector.y));
-
-            //rotation.z = 1-Mathf.Atan(vector.y / vector.x) *Mathf.Rad2Deg / 90f;
-            //rotation.w = vector.y < 0 ? -vector.y: vector.y;
             transform.localRotation = Quaternion.Euler(0, 0, (float)angleInDegrees + 90);
         }
+        else gameObject.SetActive(false);
     }
 }
