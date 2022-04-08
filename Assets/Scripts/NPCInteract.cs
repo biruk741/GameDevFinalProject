@@ -19,7 +19,7 @@ public class NPCInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && interactible) {
             trigger.TriggerDialogue();
             interactText.text = "";
-            destination.goToNext();
+            MissionTracker.instance.level++;
         }
     }
 
