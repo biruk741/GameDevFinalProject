@@ -15,18 +15,14 @@ public class MinimapPointer : MonoBehaviour
 
     public static MinimapPointer instance;
 
-    bool destinationProvided = false;
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        destinationProvided = currentDestination != null;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        destinationProvided = currentDestination != null;
+        bool destinationProvided = currentDestination != null;
         if (destinationProvided)
         {
             if (!gameObject.activeInHierarchy) gameObject.SetActive(true);
@@ -35,6 +31,6 @@ public class MinimapPointer : MonoBehaviour
             double angleInDegrees = (180 / System.Math.PI) * angleInRadians;
             transform.localRotation = Quaternion.Euler(0, 0, (float)angleInDegrees + 90);
         }
-        else gameObject.SetActive(false);
+        //else gameObject.SetActive(false);
     }
 }

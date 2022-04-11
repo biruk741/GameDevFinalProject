@@ -13,6 +13,10 @@ public class NPCInteract : MonoBehaviour
     {
         interactText.text = "";
     }
+    private void OnDisable()
+    {
+        interactText.text = "";
+    }
 
     private void FixedUpdate()
     {

@@ -7,8 +7,12 @@ public class Level : MonoBehaviour
     public MissionTracker.LEVEL level;
     public Transform levelDestination;
 
-    private void Awake()
+    IEnumerator Start()
     {
+        while(MinimapPointer.instance == null)
+        {
+            yield return null;
+        }
         Refresh();
         MissionTracker.instance.onLevelChanged += Refresh;
     }
@@ -19,6 +23,7 @@ public class Level : MonoBehaviour
         gameObject.SetActive(levelMatch);
         if(levelMatch && MinimapPointer.instance != null)
         {
+
             MinimapPointer.instance.SetDestination(levelDestination);
         }
     }
