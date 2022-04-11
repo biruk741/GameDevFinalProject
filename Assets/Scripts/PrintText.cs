@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PrintText : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PrintText : MonoBehaviour
     private WaitForSeconds waitForSeconds;
     private WaitForSeconds waitForSecondsDelayed;
     public PrintText triggerNext;
+    public bool isFinal = false;
+    public string nextScene = "";
     private void Start()
     {
         waitForSeconds = new WaitForSeconds(1 / speed);
@@ -31,8 +34,10 @@ public class PrintText : MonoBehaviour
                 yield return textToBeTyped[curIndex] + "" != "." ? waitForSeconds: waitForSecondsDelayed;
                 curIndex++;
             }
-            if (triggerNext != null) triggerNext.printText();
+            if (triggerNext != null) { triggerNext.printText(); yield break; }
+            if (isFinal) SceneManager.LoadScene(nextScene);
         }
+
         StartCoroutine(print());
     }
 

@@ -363,15 +363,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df1001bbf8dded4e86b81e27b25dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToBeTyped: Warwick Platt had always loved dull Chicago with its quaint, quirky
-    quarries. It was a place where he felt confident.  He was a remarkable, gracious,
-    cocoa drinker with greasy eyelashes and moist hands. His friends saw him as an
-    annoyed, angry author. Once, he had even helped a purple chicken recover from
-    a flying accident. That's the sort of man he was.
+  textToBeTyped: " There once was a Morris student named Marcus. He was failing all
+    of his classes so he needed to do well on all the rest of his tests in order
+    to keep playing tennis. So every night at 10 pm he would leave his dorm and go
+    study and come back to his dorm room at 2 am. Until one night he came back at
+    midnight instead. His roommates asked him why he isn\u2019t still studying and
+    he told them that he was prepared for all of his tests next week. He started
+    to ace all of his exams and never went out studying again. Finally his roommates
+    asked him how he was all of a sudden doing well in all of his classes. He told
+    them that he had a really good tutor. His friends didn\u2019t believe him but
+    decided to let it go."
   textContainer: {fileID: 1263663759}
   printOnStart: 1
-  speed: 35
+  speed: 60
   triggerNext: {fileID: 1808879509}
+  isFinal: 0
+  nextScene: 
 --- !u!114 &1263663759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,15 +399,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Warwick Platt had always loved dull Chicago with its quaint, quirky quarries.
-    It was a place where he felt confident.
-
-    
-
-    He was a remarkable, gracious,
-    cocoa drinker with greasy eyelashes and moist hands. His friends saw him as an
-    annoyed, angry author. Once, he had even helped a purple chicken recover from
-    a flying accident. That''s the sort of man he was.'
+  m_text: "There once was a Morris student named Marcus. He was failing all of his
+    classes so he needed to do well on all the rest of his tests in order to keep
+    playing tennis. So every night at 10 pm he would leave his dorm and go study
+    and come back to his dorm room at 2 am. Until one night he came back at midnight
+    instead. His roommates asked him why he isn\u2019t still studying and he told
+    them that he was prepared for all of his tests next week. He started to ace all
+    of his exams and never went out studying again. Finally his roommates asked him
+    how he was all of a sudden doing well in all of his classes. He told them that
+    he had a really good tutor. His friends didn\u2019t believe him but decided to
+    let it go."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91f4627024e96d441a546c7762ee251a, type: 2}
   m_sharedMaterial: {fileID: 653756730030389492, guid: 91f4627024e96d441a546c7762ee251a, type: 2}
@@ -427,8 +435,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.5
-  m_fontSizeBase: 16.5
+  m_fontSize: 13.06
+  m_fontSizeBase: 13.06
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -778,15 +786,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df1001bbf8dded4e86b81e27b25dfe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToBeTyped: Then he saw something in the distance, or rather someone. It was
-    the figure of Chris Sparkle. Chris was an energetic academic with slimy eyelashes
-    and feathery hands.  Warwick gulped. He was not prepared for Chris.  As Warwick
-    stepped outside and Chris came closer, he could see the flipping smile on his
-    face.
+  textToBeTyped: " A week later, he disappeared but left a note in his dorm room.
+    He wrote that he found a mystical study guide that gives anyone who uses it straight
+    A\u2019s. At first it seemed like a great tool, but soon both professors and
+    students started to ask him how he got so smart so fast. He knew he couldn\u2019t
+    show anyone the study guide because everyone would want it and fight over it.
+    He got so overwhelmed by  all of this he decided to hide the study guide somewhere
+    on campus and then leave. His roommtes searched their dorm room and everywhere
+    else on campus they thought it could be, but they never found it. They went on
+    to graduate last spring and the mystical study guide is still never to be found."
   textContainer: {fileID: 1808879510}
   printOnStart: 0
-  speed: 35
+  speed: 60
   triggerNext: {fileID: 0}
+  isFinal: 1
+  nextScene: OutdoorsScene
 --- !u!114 &1808879510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,19 +821,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Then he saw something in the distance, or rather someone. It was the figure
-    of Chris Sparkle. Chris was an energetic academic with slimy eyelashes and feathery
-    hands.
-
-    
-
-    Warwick gulped. He was not prepared for Chris.
-
-    
-
-    As
-    Warwick stepped outside and Chris came closer, he could see the flipping smile
-    on his face.'
+  m_text: "A week later, he disappeared but left a note in his dorm room. He wrote
+    that he found a mystical study guide that gives anyone who uses it straight A\u2019s.
+    At first it seemed like a great tool, but soon both professors and students started
+    to ask him how he got so smart so fast. He knew he couldn\u2019t show anyone
+    the study guide because everyone would want it and fight over it. He got so overwhelmed
+    by  all of this he decided to hide the study guide somewhere on campus and then
+    leave. His roommtes searched their dorm room and everywhere else on campus they
+    thought it could be, but they never found it. They went on to graduate last spring
+    and the mystical study guide is still never to be found."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91f4627024e96d441a546c7762ee251a, type: 2}
   m_sharedMaterial: {fileID: 653756730030389492, guid: 91f4627024e96d441a546c7762ee251a, type: 2}
@@ -846,8 +856,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.5
-  m_fontSizeBase: 16.5
+  m_fontSize: 13.06
+  m_fontSizeBase: 13.06
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

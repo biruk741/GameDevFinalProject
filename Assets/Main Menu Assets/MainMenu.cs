@@ -26,6 +26,6 @@ public class MainMenu : MonoBehaviour
 
 
 
-        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("OutdoorsScene"));
+        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("StoryTelling"));
     }
 }
