@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 851.9, y: 210.9}
+  m_AnchoredPosition: {x: 851.9, y: 257.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154760243
@@ -370,7 +370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48.16, y: 278.8}
+  m_AnchoredPosition: {x: 61.5, y: 333.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172997690
@@ -595,6 +595,7 @@ MonoBehaviour:
   periodTxt: {fileID: 172997690}
   opponentScore: {fileID: 1658879492}
   outcome: {fileID: 731318139}
+  DisableMovement: 0
 --- !u!4 &271803593
 Transform:
   m_ObjectHideFlags: 0
@@ -1188,7 +1189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -176.2, y: 316.2}
+  m_AnchoredPosition: {x: -205.4, y: 371}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974916790
@@ -1703,7 +1704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538704138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -24.11}
+  m_LocalPosition: {x: 4.82, y: 0, z: -24.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1924,7 +1925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.5, y: 316.9}
+  m_AnchoredPosition: {x: 226.1, y: 370.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658879492
@@ -2265,7 +2266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074233885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 8.2, z: 0}
+  m_LocalPosition: {x: 5.02, y: 8.2, z: 0}
   m_LocalScale: {x: 2.23, y: 2.23, z: 0.4943}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2489,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 121.5
+      value: 143.11
       objectReference: {fileID: 0}
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
