@@ -57,8 +57,8 @@ public class noteaction : MonoBehaviour
                     FindObjectOfType<score>().Scoreupdate(scorepoints);
                     Spawn.Instance.PlaySomeOfSong();
                     animator.Play("Played");
-                    print(Id);
-                    print(Spawn.Instance.NotesToSpawn);
+                 //   print(Id);
+                //    print(Spawn.Instance.NotesToSpawn);
                     if(Id == Spawn.Instance.NotesToSpawn)
                     {
                         Spawn.Instance.lastNote = true;
