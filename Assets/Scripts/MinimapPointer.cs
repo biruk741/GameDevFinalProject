@@ -5,30 +5,32 @@ using UnityEngine;
 public class MinimapPointer : MonoBehaviour
 {
     public Transform player;
-    public Transform destination;
+    private Transform currentDestination;
 
-    bool destinationProvided = false;
-    // Start is called before the first frame update
-    void Start()
+    public void SetDestination(Transform dest)
     {
-        destinationProvided = destination != null;
+        currentDestination = dest;
+        //do other setup stuff
     }
 
-    // Update is called once per frame
+    public static MinimapPointer instance;
+
+    void Start()
+    {
+        instance = this;
+    }
+
     void FixedUpdate()
     {
-        destinationProvided = destination != null;
-        if (destinationProvided) {
-            Vector3 vector = (player.position - destination.position).normalized;
+        bool destinationProvided = currentDestination != null;
+        if (destinationProvided)
+        {
+            if (!gameObject.activeInHierarchy) gameObject.SetActive(true);
+            Vector3 vector = (player.position - currentDestination.position).normalized;
             float angleInRadians = Mathf.Atan2(vector.y, vector.x);
             double angleInDegrees = (180 / System.Math.PI) * angleInRadians;
-            Quaternion rotation = transform.rotation;
-
-            print("vector.x = " + vector.x + " and vector.y = " + vector.y + " y/x = " + (vector.x/vector.y));
-
-            //rotation.z = 1-Mathf.Atan(vector.y / vector.x) *Mathf.Rad2Deg / 90f;
-            //rotation.w = vector.y < 0 ? -vector.y: vector.y;
             transform.localRotation = Quaternion.Euler(0, 0, (float)angleInDegrees + 90);
         }
+        //else gameObject.SetActive(false);
     }
 }

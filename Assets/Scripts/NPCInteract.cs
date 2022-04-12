@@ -13,13 +13,17 @@ public class NPCInteract : MonoBehaviour
     {
         interactText.text = "";
     }
+    private void OnDisable()
+    {
+        interactText.text = "";
+    }
 
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.E) && interactible) {
             trigger.TriggerDialogue();
             interactText.text = "";
-            destination.goToNext();
+            MissionTracker.instance.level++;
         }
     }
 

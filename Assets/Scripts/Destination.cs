@@ -15,11 +15,6 @@ public class Destination : MonoBehaviour
         }
     }
 
-    public void goToNext() {
-        transform.position = nextLocation.position;
-        print("Went to next!");
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {

@@ -11,6 +11,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button ControlsClosedButton;
     [SerializeField] private GameObject ControlsUI;
     [SerializeField] private Button ExitButton;
+    [SerializeField] private Button OptionsButton;
+
+    public GameObject playIndicator;
+    public GameObject optionsIndicator;
+    public GameObject exitIndicator;
 
 
     private void Awake()
@@ -18,6 +23,9 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         ControlsOpenButton.onClick.AddListener(() => { ControlsUI.SetActive(true); });
         ControlsClosedButton.onClick.AddListener(() => { ControlsUI.SetActive(false); });
-        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("OutdoorsScene"));
+
+
+
+        PlayButton.onClick.AddListener(() => SceneManager.LoadScene("StoryTelling"));
     }
 }
