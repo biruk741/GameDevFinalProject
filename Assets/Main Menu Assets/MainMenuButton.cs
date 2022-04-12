@@ -9,6 +9,13 @@ public class MainMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public GameObject indicator;
     public TMPro.TMP_Text text;
 
+    public bool isContinue;
+
+    private void Start()
+    {
+        if (isContinue) gameObject.SetActive(MissionTracker.instance.level != 0);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         indicator.SetActive(true);
