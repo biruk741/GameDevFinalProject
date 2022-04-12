@@ -10,7 +10,6 @@ public class Spawn : MonoBehaviour
     public GameObject note;
     GameObject tiles;
     private int prevRandomIndex;
-    private bool lastSpawn = false;
     public int NotesToSpawn = 0;
     public AudioSource audioSource;
     public bool lastNote = false;
