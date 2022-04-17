@@ -9,6 +9,7 @@ public class MoveController : MonoBehaviour
     public float maxY;
     public float maxX;
     public float minX;
+
     // Start is called before the first frame update 
     void Start()
     {
@@ -25,6 +26,7 @@ public class MoveController : MonoBehaviour
         {
             moveBasketballUpAndDown();
             Shoot.ShootBall.shoot = false;
+         //   moveNPC();
         }
     }
 
@@ -37,7 +39,12 @@ public class MoveController : MonoBehaviour
         x = Random.Range(minX, maxX);
         transform.position = new Vector3(x, y, 0);
     }
-
+    private void moveNPC()
+    {
+        y = -2.89f;
+        x = Random.Range(-44.69f, -4.66f);
+        GameObject.Find("NPC").transform.position = new Vector3(x, y, 0);
+    }
 
 
    

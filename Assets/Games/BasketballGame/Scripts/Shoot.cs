@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class Shoot : MonoBehaviour
 {
     public GameObject Ball;
@@ -27,6 +27,7 @@ public class Shoot : MonoBehaviour
     public Text opponentScore;
     public GameObject outcome;
     public bool DisableMovement = false;
+    public GameObject dialog;
     // Start is called before the first frame update
     void Start()
     {
@@ -115,14 +116,22 @@ public class Shoot : MonoBehaviour
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Lose";
+            dialog.SetActive(true);
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "I Knew I Would Win";
+           
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) > int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Win";
+            dialog.SetActive(true);
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Wow You Actually Won";
+ 
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) == int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "Tie Game";
+            dialog.SetActive(true);
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Did Not Expect To Tie";
         }
     
         restartGame.SetActive(true);

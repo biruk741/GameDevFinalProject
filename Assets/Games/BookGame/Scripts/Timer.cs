@@ -59,6 +59,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
        // PressButton.Instance.spriteRenderer.color = new Color(.1981132f, .1981132f, .1981132f, 1f);
         spawnbooks.Instance.bookindicators[PressButton.Instance.randomIndex].SetActive(false);
         GameObject.Find("DropBook").SetActive(false);
+        GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Did Alright";
         restartButton.SetActive(true);
         print(PressButton.Instance.Score);
 

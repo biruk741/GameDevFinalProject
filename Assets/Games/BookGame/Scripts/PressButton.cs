@@ -20,6 +20,7 @@ public class PressButton : MonoBehaviour
     [SerializeField] public TextMeshProUGUI bookMessage;
     public GameObject[] bookText;
     public int Score;
+    public int countertext = 1;
     public static PressButton Instance { get; private set; }
    
     private void Awake()

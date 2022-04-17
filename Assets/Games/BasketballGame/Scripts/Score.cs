@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Score : MonoBehaviour
 {
     public Text clickCountTxt;
     public GameObject PlusOnePoint;
     public GameObject OnFire;
     public int numOfScorePerRound = 0;
+    public GameObject dialog;
+    public string[] text;
+    private int counter = 1;
     public static Score GetScore { get; private set; }
 
 
@@ -32,6 +36,13 @@ public class Score : MonoBehaviour
         var number = int.Parse(clickCountTxt.text.ToString());
         number = number + 1;
         clickCountTxt.text = number.ToString();
+        if (number / counter == 1)
+        {
+            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = text[Random.Range(0, text.Length)];
+            dialog.SetActive(true);
+            counter = 3 + counter;
+        }
         Shoot.ShootBall.numberOfBalls = Shoot.ShootBall.numberOfBalls - 1;
         PlusOnePoint.SetActive(true);
         Wait(0.5f, () =>
