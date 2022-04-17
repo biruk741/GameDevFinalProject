@@ -60,7 +60,7 @@ public class PressButton : MonoBehaviour
 
                     }
 
-            //        spriteRenderer.color = new Color(.1981132f, .1981132f, .1981132f, 1f);
+                    GameObject.Find("DropBook").GetComponent<TextMeshProUGUI>().text = "Can Drop Book: No";
                     spawnbooks.Instance.callBook(index, randomIndex);
                     spawnbooks.Instance.bookindicators[randomIndex].SetActive(false);
                     LockInput();
@@ -83,7 +83,7 @@ public class PressButton : MonoBehaviour
                 randomIndex = spawnbooks.Instance.GetRandomBook();
                 bookMessage.text = "Match " + bookText[randomIndex].GetComponent<TextMeshProUGUI>().text + " Book";
                 spawnbooks.Instance.bookindicators[randomIndex].SetActive(true);
-             //   spriteRenderer.color = color;
+                GameObject.Find("DropBook").GetComponent<TextMeshProUGUI>().text = "Can Drop Book: Yes";
                 _inputLocked = false;
                 timerIsRunning = false;
             }

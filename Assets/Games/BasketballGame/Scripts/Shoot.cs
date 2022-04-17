@@ -81,7 +81,7 @@ public class Shoot : MonoBehaviour
         }
         if (ballQueue.Count > 0 && numberOfBallsHitGround - Score.GetScore.numOfScorePerRound == limitOfBalls)
             Destroy(ballQueue.Dequeue());
-        else if(ballQueue.Count > 0 && ballQueue.Count == limitOfBalls*1.5)
+        else if(ballQueue.Count > 0 && ballQueue.Count >= 10)
         {
             Destroy(ballQueue.Dequeue());
         }

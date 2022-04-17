@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class gameController : MonoBehaviour
 {
     public GameObject box;
@@ -31,7 +31,10 @@ public static System.Random rnd = new System.Random();
     int cardsBy = 4;
     // public ElementVisible winnerPraise;
     int startCount;
+    public GameObject dialog;
     List<GameObject> generatedObjects = new List<GameObject>();
+    public int textShow = 1;
+    public string[] text;
 
     void OnEnable()
     {
@@ -51,13 +54,14 @@ public static System.Random rnd = new System.Random();
         numOfPictures = 24;
         cardsBy = 6;
         startCount = numOfPictures;
+        GameObject.Find("NPC").transform.position = new Vector3(-6f, -13.16f, -4268f);
         StartGame();
     }
 
     public void MediumSetup()
     {
         HideButtons();
-        GameObject.Find("Main Camera").transform.position = new Vector3(-2.7f, -5.6f, -61.18f);
+        GameObject.Find("Main Camera").transform.position = new Vector3(-2.7f, -7.1f, -63.57f);
         GameObject.Find("chair").transform.position = new Vector3(-3.31f, 0.9174957f, -5.84f);
         xPosition = -25f;
         changeX = 15f;
@@ -66,6 +70,7 @@ public static System.Random rnd = new System.Random();
         // yChange = -4f;
         numOfPictures = 16;
         startCount = numOfPictures;
+        GameObject.Find("NPC").transform.position = new Vector3(-19.64f, -11.9f, -4268.07f);
         StartGame();
     }
 
@@ -73,6 +78,7 @@ public static System.Random rnd = new System.Random();
     {
         GameObject.Find("Main Camera").transform.position = new Vector3(0f, 1.4f, -49.98f);
         HideButtons();
+        GameObject.Find("NPC").transform.position = new Vector3(-13.31f, -5.4f, -4254.22f);
         startCount = numOfPictures;
         StartGame();
     }
@@ -158,19 +164,26 @@ public static System.Random rnd = new System.Random();
             cardUp1 = null;
             cardUp2 = null;
             index++;
-            print(index);
-            print(startCount);
             if (index == startCount/2)
             {
                 foreach (var obj in generatedObjects)
                 {
                     Destroy(obj);
                 }
+                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = "WOW YOU ACTUALLY WON";
                 winnerPraised.GetComponent<ElementVisible>().Visible = true;
                 playAgain.GetComponent<ElementVisible>().Visible = true;
 
 
             }
+        }
+        if (clickCount / textShow == 1)
+        {
+            textShow = textShow + 2;
+            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = text[Random.Range(0, text.Length)];
+            dialog.SetActive(true);
         }
     }
     public void PlayAgain()

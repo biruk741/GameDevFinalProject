@@ -9,7 +9,7 @@ public class GameOverScreen : MonoBehaviour
     //public Text endscore;
     private Visibility visibility;
     public Visibility winnerPraise;
-    
+    public GameObject dialogbox;
     // Start is called before the first frame update
     public void GameOver() 
             {
@@ -18,12 +18,19 @@ public class GameOverScreen : MonoBehaviour
                 
               //  endscore.text = FindObjectOfType<score>().scorepoints.ToString();
                  if (Spawn.Instance.PlayerWon){
-                winnerPraise.Visible = true;
+                
+                    winnerPraise.Visible = true;
+                    dialogbox.SetActive(true);
+                    var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                    dialogtext.text = "WOW YOU ACTUALLY WON";
                 }
         else
         {
-            winnerPraise.GetComponent<Text>().text = "You Lose";
+            winnerPraise.GetComponent<Text>().text = "You  Lose";
             winnerPraise.Visible = true;
+            dialogbox.SetActive(true);
+            var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = "I KNEW YOU WOULD LOSE";
         }
     }
 

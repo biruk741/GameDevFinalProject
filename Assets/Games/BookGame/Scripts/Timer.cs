@@ -58,6 +58,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         MeterBook.Instance.mask.fillAmount = 1;
        // PressButton.Instance.spriteRenderer.color = new Color(.1981132f, .1981132f, .1981132f, 1f);
         spawnbooks.Instance.bookindicators[PressButton.Instance.randomIndex].SetActive(false);
+        GameObject.Find("DropBook").SetActive(false);
         restartButton.SetActive(true);
         print(PressButton.Instance.Score);
 
@@ -67,6 +68,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         GameObject.Find("StartGame").SetActive(false);
         PressButton.Instance.startGame = true;
         GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Score: 0";
+        GameObject.Find("DropBook").GetComponent<TextMeshProUGUI>().text = "Can Drop Book: Yes";
         MeterBook.Instance.StartCoroutine(MeterBook.Instance.UpdatePowerBar());
         Being(Duration);
         PressButton.Instance.randomIndex = spawnbooks.Instance.GetRandomBook();
