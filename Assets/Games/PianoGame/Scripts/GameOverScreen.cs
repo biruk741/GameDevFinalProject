@@ -22,7 +22,7 @@ public class GameOverScreen : MonoBehaviour
                     winnerPraise.Visible = true;
                     dialogbox.SetActive(true);
                     var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                    dialogtext.text = "WOW YOU ACTUALLY WON";
+                    dialogtext.text = "WOW YOU ARE AMAZING";
                 }
         else
         {
@@ -30,7 +30,7 @@ public class GameOverScreen : MonoBehaviour
             winnerPraise.Visible = true;
             dialogbox.SetActive(true);
             var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
-            dialogtext.text = "I KNEW YOU WOULD LOSE";
+            dialogtext.text = "TRY AGAIN";
         }
     }
 

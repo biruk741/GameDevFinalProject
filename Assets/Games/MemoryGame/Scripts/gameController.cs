@@ -46,7 +46,7 @@ public static System.Random rnd = new System.Random();
     public void HardSetup()
     {
         HideButtons();
-        GameObject.Find("Main Camera").transform.position = new Vector3(9.99f, -7.9f, -65.9f);
+        GameObject.Find("Main Camera").transform.position = new Vector3(9.99f, -10.6f, -69.33f);
         GameObject.Find("chair").transform.position = new Vector3(10.52f, 0.9174957f, -9.97f);
         // yChange = -3f;
         //   yPosition = 9.5f;
@@ -54,14 +54,14 @@ public static System.Random rnd = new System.Random();
         numOfPictures = 24;
         cardsBy = 6;
         startCount = numOfPictures;
-        GameObject.Find("NPC").transform.position = new Vector3(-6f, -13.16f, -4268f);
+        GameObject.Find("NPC").transform.position = new Vector3(-10.21f, -23.69f, -4268f);
         StartGame();
     }
 
     public void MediumSetup()
     {
         HideButtons();
-        GameObject.Find("Main Camera").transform.position = new Vector3(-2.7f, -7.1f, -63.57f);
+        GameObject.Find("Main Camera").transform.position = new Vector3(-2.36f, -9.54f, -70.8f);
         GameObject.Find("chair").transform.position = new Vector3(-3.31f, 0.9174957f, -5.84f);
         xPosition = -25f;
         changeX = 15f;
@@ -70,15 +70,16 @@ public static System.Random rnd = new System.Random();
         // yChange = -4f;
         numOfPictures = 16;
         startCount = numOfPictures;
-        GameObject.Find("NPC").transform.position = new Vector3(-19.64f, -11.9f, -4268.07f);
+        GameObject.Find("NPC").transform.position = new Vector3(-23.4f, -21.8f, -4268.07f);
         StartGame();
     }
 
     public void EasySetup()
     {
-        GameObject.Find("Main Camera").transform.position = new Vector3(0f, 1.4f, -49.98f);
+        GameObject.Find("Main Camera").transform.position = new Vector3(0f, 1.5f, -53.48f);
         HideButtons();
-        GameObject.Find("NPC").transform.position = new Vector3(-13.31f, -5.4f, -4254.22f);
+        GameObject.Find("NPC").transform.position = new Vector3(-19.9f, -10.46f, -4254.22f);
+        //dialog.transform. = new Vector3(-170f, -127.2f, 0f);
         startCount = numOfPictures;
         StartGame();
     }
@@ -152,6 +153,13 @@ public static System.Random rnd = new System.Random();
         {
             clickCount++;
             clickCountTxt.text = "Click Score: " + clickCount.ToString();
+            if (clickCount / textShow == 1)
+            {
+                textShow = textShow + 2;
+                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = text[Random.Range(0, text.Length)];
+                dialog.SetActive(true);
+            }
         }
 
         if (cardUp1 != null && cardUp2 != null &&
@@ -164,6 +172,13 @@ public static System.Random rnd = new System.Random();
             cardUp1 = null;
             cardUp2 = null;
             index++;
+            if (clickCount / textShow == 1)
+            {
+                textShow = textShow + 2;
+                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = text[Random.Range(0, text.Length)];
+                dialog.SetActive(true);
+            }
             if (index == startCount/2)
             {
                 foreach (var obj in generatedObjects)
@@ -171,20 +186,14 @@ public static System.Random rnd = new System.Random();
                     Destroy(obj);
                 }
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = "WOW YOU ACTUALLY WON";
+                dialogtext.text = "WOW YOU ARE AMAZING";
                 winnerPraised.GetComponent<ElementVisible>().Visible = true;
                 playAgain.GetComponent<ElementVisible>().Visible = true;
 
 
             }
         }
-        if (clickCount / textShow == 1)
-        {
-            textShow = textShow + 2;
-            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-            dialogtext.text = text[Random.Range(0, text.Length)];
-            dialog.SetActive(true);
-        }
+       
     }
     public void PlayAgain()
     {

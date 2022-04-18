@@ -734,6 +734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 527659334}
     m_Modifications:
+    - target: {fileID: 6709979459787149115, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
+      propertyPath: m_text
+      value: Musician
+      objectReference: {fileID: 0}
     - target: {fileID: 6709979461801363512, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -804,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6709979461801363512, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 248.5
+      value: 272
       objectReference: {fileID: 0}
     - target: {fileID: 6709979461801363512, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -821,6 +825,10 @@ PrefabInstance:
     - target: {fileID: 6709979461801363513, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
       propertyPath: m_Name
       value: DialogBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709979461801363513, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de4c65fde4c73eb48b13ac33565bd61d, type: 3}
@@ -2468,16 +2476,17 @@ MonoBehaviour:
   scorepoints: 0
   dialog: {fileID: 1848052636}
   text:
-  - YOU WILL LOSE
-  - THE GAME IS TOO DIFFICULT
-  - YOU ARE NOT SKILLED ENOUGH
-  - WHY DO YOU EVEN TRY
-  - DO YOU EVEN KNOW HOW TO PLAY
-  - QUIT WHILE YOU CAN
-  - ONLY THE WORTHY CAN PLAY THE PIANO
-  - THESE SONGS ARE TOO HARD FOR YOU
-  - YOU ARE TERRIBLE
-  - MIGHT AS WELL STOP NOW
+  - YOU ARE DOING WONDERFUL
+  - GOOD JOB
+  - KEEP PRESSING THE KEYS
+  - THE SONG SOUNDS WONDERFUL
+  - KEEP GOING
+  - YOU ARE A NATURAL
+  - YOU ARE A PRODIGY
+  - HAVE YOU PLAYED BEFORE
+  - YOU ARE ALMOST DONE
+  - HAVE YOU PRACTICE BEFORE
+  - WOW YOU ARE AMAZING
 --- !u!114 &2056493715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,43 +3146,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.5
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4239.7
+      value: -4240.65
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99942374
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.0002764376
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.00042716443
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.033939984
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1806044914951626770, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 7555834695237004875, guid: ca575df3b33f9bb4b8448452cac5e39c, type: 3}
       propertyPath: m_Name

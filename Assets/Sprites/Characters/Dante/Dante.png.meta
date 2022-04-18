@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 447db527aa8344649834af742c45d74f
+guid: 3b3d42a6abeff0e43b12560a12897135
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7663256970462078997
-    second: Cookie_0
+      213: -7960608948029356370
+    second: Dante_0
   - first:
-      213: 1800657806909718875
-    second: Cookie_1
+      213: 304632292816538325
+    second: Dante_1
   - first:
-      213: -3651257248266586529
-    second: Cookie_2
+      213: -364533069856808335
+    second: Dante_2
   - first:
-      213: 5741666877974003886
-    second: Cookie_3
+      213: 1945212587719286503
+    second: Dante_3
   - first:
-      213: 4686279067541901985
-    second: Cookie_4
+      213: -6877380596641325596
+    second: Dante_4
   - first:
-      213: 4314853387655154291
-    second: Cookie_5
+      213: 5843834390826600146
+    second: Dante_5
   - first:
-      213: -7501804766800523965
-    second: Cookie_6
+      213: -1355628701872312577
+    second: Dante_6
   - first:
-      213: 3323198455610267437
-    second: Cookie_7
+      213: -859993200583291031
+    second: Dante_7
   - first:
-      213: 5113572355543436507
-    second: Cookie_8
+      213: 1323523443124489518
+    second: Dante_8
   - first:
-      213: -4137449262180203108
-    second: Cookie_9
+      213: 1471375351099623559
+    second: Dante_9
   - first:
-      213: 1713722354910134104
-    second: Cookie_10
+      213: 7078075360576773593
+    second: Dante_10
   - first:
-      213: -8676029335250461007
-    second: Cookie_11
+      213: 3569398280642196285
+    second: Dante_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cookie_0
+      name: Dante_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,20 +147,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 518adeaec9b595a60800000000000000
-      internalID: 7663256970462078997
+      spriteID: ea60ae0c65c368190800000000000000
+      internalID: -7960608948029356370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_1
+      name: Dante_1
       rect:
         serializedVersion: 2
         x: 32
@@ -168,20 +168,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5143ee2cb83df810800000000000000
-      internalID: 1800657806909718875
+      spriteID: 5da4170d4754a3400800000000000000
+      internalID: 304632292816538325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_2
+      name: Dante_2
       rect:
         serializedVersion: 2
         x: 64
@@ -189,20 +189,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56ff7db0e0245dc0800000000000000
-      internalID: -3651257248266586529
+      spriteID: 1726d46ba1be0faf0800000000000000
+      internalID: -364533069856808335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_3
+      name: Dante_3
       rect:
         serializedVersion: 2
         x: 0
@@ -210,20 +210,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea04448da9f7eaf40800000000000000
-      internalID: 5741666877974003886
+      spriteID: 7ee50a7da88cefa10800000000000000
+      internalID: 1945212587719286503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_4
+      name: Dante_4
       rect:
         serializedVersion: 2
         x: 32
@@ -231,20 +231,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a21f23abf1090140800000000000000
-      internalID: 4686279067541901985
+      spriteID: 4ed970809c2ae80a0800000000000000
+      internalID: -6877380596641325596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_5
+      name: Dante_5
       rect:
         serializedVersion: 2
         x: 64
@@ -252,20 +252,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a83158b4071eb30800000000000000
-      internalID: 4314853387655154291
+      spriteID: 2d64e6f9a68791150800000000000000
+      internalID: 5843834390826600146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_6
+      name: Dante_6
       rect:
         serializedVersion: 2
         x: 0
@@ -273,20 +273,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34dc5849f4c34e790800000000000000
-      internalID: -7501804766800523965
+      spriteID: ffea399c0e6df2de0800000000000000
+      internalID: -1355628701872312577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_7
+      name: Dante_7
       rect:
         serializedVersion: 2
         x: 32
@@ -294,20 +294,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d27d6c8636f5e1e20800000000000000
-      internalID: 3323198455610267437
+      spriteID: 96f4bf19db0b014f0800000000000000
+      internalID: -859993200583291031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_8
+      name: Dante_8
       rect:
         serializedVersion: 2
         x: 64
@@ -315,20 +315,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc8c69e6fe07f640800000000000000
-      internalID: 5113572355543436507
+      spriteID: e2d46572f891e5210800000000000000
+      internalID: 1323523443124489518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_9
+      name: Dante_9
       rect:
         serializedVersion: 2
         x: 0
@@ -336,20 +336,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c950c8331d3d496c0800000000000000
-      internalID: -4137449262180203108
+      spriteID: 7880f8d06106b6410800000000000000
+      internalID: 1471375351099623559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_10
+      name: Dante_10
       rect:
         serializedVersion: 2
         x: 32
@@ -357,20 +357,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f7010f66d58c710800000000000000
-      internalID: 1713722354910134104
+      spriteID: 9dd9f980a006a3260800000000000000
+      internalID: 7078075360576773593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cookie_11
+      name: Dante_11
       rect:
         serializedVersion: 2
         x: 64
@@ -378,14 +378,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be1783894d889780800000000000000
-      internalID: -8676029335250461007
+      spriteID: d33719323dc098130800000000000000
+      internalID: 3569398280642196285
       vertices: []
       indices: 
       edges: []
@@ -393,7 +393,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b41ed0dae5086ce4195986fed1f9c094
+    spriteID: 7a32147bbe9025943834e7ec046b15c6
     internalID: 0
     vertices: []
     indices: 

@@ -9,7 +9,7 @@ public class score : MonoBehaviour
     public int scorepoints = 0;
     public GameObject dialog;
     public string[] text;
-    private int counter = 10;
+    private int counter = 1;
     public void Scoreupdate(int score)
     {
         scorepoints +=  score;
