@@ -658,13 +658,19 @@ MonoBehaviour:
   dialog: {fileID: 6709979460233395516}
   textShow: 2
   text:
-  - YOU ARE NOT GOOD
-  - LEARN TO MATCH CORRECT CARDS
-  - QUIT THE GAME
-  - YOU ARE TERRIBLE
-  - WOW HOW CAN SOMEONE BE SO BAD
-  - DO YOU EVEN KNOW HOW TO PLAY
-  - THIS GAME IS NOT FOR YOU
+  - YOU ARE GOOD
+  - KEEP GOING
+  - KEEP MATCHING THE CARDS
+  - I NEVER SEEN SOMEONE AS GOOD AS YOU
+  - HAVE YOU PLAYED THIS GAME BEFORE
+  - YOUR SKILLS ARE TOO GOOD
+  - YOU ARE GOING SO FAST
+  - YOU MUST HAVE GOOD MEMORY
+  - YOU ARE VERY SKILLED
+  - ALMOST DONE
+  - TRY TO KEEP THE SCORE LOW
+  - 'WOW THE SCORE IS LOW '
+  - TRY TO FLIP ONE CARD AT A TIME
 --- !u!4 &1500627839
 Transform:
   m_ObjectHideFlags: 0
@@ -736,12 +742,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 210985b1ceff97141a580f33a11579dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f3615064407ea04fb14d5c4ac6c647d, type: 3}
   m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 128.2, y: 72}
+  m_Size: {x: 3.41, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -866,21 +872,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449195557719658273, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 304632292816538325, guid: 3b3d42a6abeff0e43b12560a12897135, type: 3}
     - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.32
+      value: -16.63
       objectReference: {fileID: 0}
     - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -8.7
       objectReference: {fileID: 0}
     - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4257.3
+      value: -4252.22
       objectReference: {fileID: 0}
     - target: {fileID: 2753555035067404410, guid: 62fb33889b9e42b46866c8b8ca2a09bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -969,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713338021466415162, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 258.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 713338021466415162, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -989,11 +1007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 713338021466415162, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 261.23
+      value: -117.49
       objectReference: {fileID: 0}
     - target: {fileID: 713338021466415162, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -188.2
+      value: -135.4
       objectReference: {fileID: 0}
     - target: {fileID: 713338021466415162, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1010,6 +1028,14 @@ PrefabInstance:
     - target: {fileID: 713338021466415163, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_Name
       value: DialogBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 713338021466415163, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 713338022138521401, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
+      propertyPath: m_text
+      value: Dante
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
