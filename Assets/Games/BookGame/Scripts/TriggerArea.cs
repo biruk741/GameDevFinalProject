@@ -23,18 +23,19 @@ public class TriggerArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag ==  tag)
+        spawnbooks.Instance.bookDropCounter = spawnbooks.Instance.bookDropCounter + 1;
+        if (spawnbooks.Instance.bookDropCounter / PressButton.Instance.countertext == 1)
+        {
+            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = text[Random.Range(0, text.Length)];
+            dialog.SetActive(true);
+            PressButton.Instance.countertext = 3 + PressButton.Instance.countertext;
+        }
+        if (collision.gameObject.tag ==  tag)
         {
             bookMessage.SetActive(true);
             PressButton.Instance.Score = PressButton.Instance.Score + 1;
             Score.GetComponent<TextMeshProUGUI>().text = "Score: " + PressButton.Instance.Score.ToString();
-            if (PressButton.Instance.Score / PressButton.Instance.countertext == 1)
-            {
-                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = text[Random.Range(0, text.Length)];
-                dialog.SetActive(true);
-                PressButton.Instance.countertext = 3 + PressButton.Instance.countertext;
-            }
             Wait(2f, () =>
             {
                 bookMessage.SetActive(false);

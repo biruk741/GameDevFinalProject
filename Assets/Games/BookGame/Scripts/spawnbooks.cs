@@ -9,10 +9,12 @@ public class spawnbooks : MonoBehaviour
     public GameObject[] prefabBooks;
     private int[] prefabArrayCalled = new int[] { 0, 0, 0, 0, 0 };
     public GameObject[] bookindicators;
+    public int bookDropCounter;
     public static spawnbooks Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
+        bookDropCounter = 0;
 
     }
     // Start is called before the first frame update

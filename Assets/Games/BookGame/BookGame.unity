@@ -374,12 +374,15 @@ MonoBehaviour:
   Score: {fileID: 988239453}
   dialog: {fileID: 713338022029865540}
   text:
-  - GET GOOD AT THE GAME
-  - DROP THE BOOKS IN THE CORRECT SPOTS
-  - WOW YOU ARE TERRIBLE
-  - FIND A NEW GAME
-  - YOU ARE NOT DROPPING THE BOOKS IN THE RIGHT SPOTS
-  - YOUR SCORE IS SO LOW
+  - Keep Dropping Books In The Correct Spots
+  - You Are Doing Great
+  - You Are A Natural
+  - Maybe You Can Work At The Library
+  - Have You Worked In The Library Before
+  - You Are Very Skilled
+  - Great Job
+  - Keep Going
+  - Have You Done This Before
 --- !u!61 &73629922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -455,12 +458,15 @@ MonoBehaviour:
   Score: {fileID: 988239453}
   dialog: {fileID: 713338022029865540}
   text:
-  - GET GOOD AT THE GAME
-  - DROP THE BOOKS IN THE CORRECT SPOTS
-  - WOW YOU ARE TERRIBLE
-  - FIND A NEW GAME
-  - YOU ARE NOT DROPPING THE BOOKS IN THE RIGHT SPOTS
-  - YOUR SCORE IS SO LOW
+  - Keep Dropping Books In The Correct Spots
+  - You Are Doing Great
+  - You Are A Natural
+  - Maybe You Can Work At The Library
+  - Have You Worked In The Library Before
+  - You Are Very Skilled
+  - Great Job
+  - Keep Going
+  - Have You Done This Before
 --- !u!61 &158926692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -670,12 +676,15 @@ MonoBehaviour:
   Score: {fileID: 988239453}
   dialog: {fileID: 713338022029865540}
   text:
-  - GET GOOD AT THE GAME
-  - DROP THE BOOKS IN THE CORRECT SPOTS
-  - WOW YOU ARE TERRIBLE
-  - FIND A NEW GAME
-  - YOU ARE NOT DROPPING THE BOOKS IN THE RIGHT SPOTS
-  - YOUR SCORE IS SO LOW
+  - Keep Dropping Books In The Correct Spots
+  - You Are Doing Great
+  - You Are A Natural
+  - Maybe You Can Work At The Library
+  - Have You Worked In The Library Before
+  - You Are Very Skilled
+  - Great Job
+  - Keep Going
+  - Have You Done This Before
 --- !u!61 &226079616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2057,12 +2066,15 @@ MonoBehaviour:
   Score: {fileID: 988239453}
   dialog: {fileID: 713338022029865540}
   text:
-  - GET GOOD AT THE GAME
-  - DROP THE BOOKS IN THE CORRECT SPOTS
-  - WOW YOU ARE TERRIBLE
-  - FIND A NEW GAME
-  - YOU ARE NOT DROPPING THE BOOKS IN THE RIGHT SPOTS
-  - YOUR SCORE IS SO LOW
+  - Keep Dropping Books In The Correct Spots
+  - You Are Doing Great
+  - You Are A Natural
+  - Maybe You Can Work At The Library
+  - Have You Worked In The Library Before
+  - You Are Very Skilled
+  - Great Job
+  - Keep Going
+  - Have You Done This Before
 --- !u!61 &941379732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2998,12 +3010,15 @@ MonoBehaviour:
   Score: {fileID: 988239453}
   dialog: {fileID: 713338022029865540}
   text:
-  - GET GOOD AT THE GAME
-  - DROP THE BOOKS IN THE CORRECT SPOTS
-  - WOW YOU ARE TERRIBLE
-  - FIND A NEW GAME
-  - YOU ARE NOT DROPPING THE BOOKS IN THE RIGHT SPOTS
-  - YOUR SCORE IS SO LOW
+  - Keep Dropping Books In The Correct Spots
+  - You Are Doing Great
+  - You Are A Natural
+  - Maybe You Can Work At The Library
+  - Have You Worked In The Library Before
+  - You Are Very Skilled
+  - Great Job
+  - Keep Going
+  - Have You Done This Before
 --- !u!61 &1164086164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3400,6 +3415,7 @@ MonoBehaviour:
   - {fileID: 1803985792}
   - {fileID: 786168056}
   - {fileID: 753985027}
+  bookDropCounter: 0
 --- !u!4 &1244000295
 Transform:
   m_ObjectHideFlags: 0
@@ -5579,12 +5595,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 7c87476e9e7a8c54496bc4bc345ad96a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ca1926c51643224cb06515523f5f543, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 3.1, y: 2.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5904,6 +5920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1298727197728824469, guid: b970031722284e54a8192162c3ad4ab7, type: 3}
+      propertyPath: m_text
+      value: Ashley
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b970031722284e54a8192162c3ad4ab7, type: 3}
 --- !u!4 &2753555036373869366 stripped
@@ -5927,12 +5947,20 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5711814328683995773, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711814328683995773, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711814328683995773, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.9
+      value: 117.09
       objectReference: {fileID: 0}
     - target: {fileID: 5711814328683995773, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.6
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 5711814328683995773, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5966,5 +5994,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8019006115768188198, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8842605911328651934, guid: 47de6c91610773a4f8d7f38fcf09646b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5503e579acec2e043a916f5628b4d97b, type: 3}

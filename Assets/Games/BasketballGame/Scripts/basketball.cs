@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class basketball : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasCollided = false;
     public bool hitRim;
+
     public static basketball GetBasketball { get; private set; }
 
 
@@ -40,6 +41,14 @@ public class basketball : MonoBehaviour
         {
             hasCollided = true;
             Shoot.ShootBall.numberOfBallsHitGround = Shoot.ShootBall.numberOfBallsHitGround + 1;
+            if (Shoot.ShootBall.numberOfBallsHitGround / Score.GetScore.counter == 1)
+            {
+                Score.GetScore.counter += 2;
+                var dialogtext = Score.GetScore.dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = Score.GetScore.text[Random.Range(0, Score.GetScore.text.Length)];
+                Score.GetScore.dialog.SetActive(true);
+                
+            }
             if (hitRim == false)
             {
                 Score.GetScore.OnFire.SetActive(false);
@@ -50,7 +59,7 @@ public class basketball : MonoBehaviour
                 Shoot.ShootBall.beginNewRound = true;
                 if (Shoot.ShootBall.roundNumber == 4)
                 {
-                
+                    
                     Shoot.ShootBall.EndGame();
                 }
             }

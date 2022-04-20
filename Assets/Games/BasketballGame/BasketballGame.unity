@@ -490,16 +490,19 @@ MonoBehaviour:
   OnFire: {fileID: 1238408009}
   numOfScorePerRound: 0
   dialog: {fileID: 1298727197706529348}
+  counter: 1
   text:
   - Keep Shooting
   - You Are A Natural
   - Have Long Have You Played Basketball
   - Maybe You Should Join The Team
-  - Game Is Almost Over
+  - Have You Practiced Before
   - Keep Making Your Shots
   - Have You Played Before
   - Your Form Is Great
   - You Shoot The Ball Well
+  - What Position Do You Play
+  - Such Range
 --- !u!1 &263693484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1164,7 @@ PrefabInstance:
     - target: {fileID: 1134405964230152592, guid: aa7bf8a966a26bd4484a8b07a2b116cf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3323198455610267437, guid: 447db527aa8344649834af742c45d74f, type: 3}
+      objectReference: {fileID: 7297818330135788354, guid: 6221cd0c954cd744ea922926282f5f0c, type: 3}
     - target: {fileID: 1134405964230152599, guid: aa7bf8a966a26bd4484a8b07a2b116cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.33
@@ -2618,6 +2621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1897882667}
     m_Modifications:
+    - target: {fileID: 3282664444712022045, guid: 1cca8b080060ef24da63f52b4f1d6814, type: 3}
+      propertyPath: m_text
+      value: Jadyn
+      objectReference: {fileID: 0}
     - target: {fileID: 3282664446455772958, guid: 1cca8b080060ef24da63f52b4f1d6814, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -74,6 +74,7 @@ public class Shoot : MonoBehaviour
                
                 Rounds.SetActive(false);
                 numberOfBalls = 0;
+                Score.GetScore.counter = 1;
                 numberOfBallsHitGround = 0;
                 Score.GetScore.numOfScorePerRound = 0;
                 DisableMovement = false;
@@ -117,7 +118,7 @@ public class Shoot : MonoBehaviour
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Lose";
             dialog.SetActive(true);
-            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "I Knew I Would Win";
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "I Knew You Would Lose";
            
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) > int.Parse(opponentScore.text))
         {
