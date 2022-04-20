@@ -8,12 +8,20 @@ public class MainMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     public GameObject indicator;
     public TMPro.TMP_Text text;
+    public bool hasDelay = false;
 
     public bool isContinue;
 
     private void Start()
     {
-        if (isContinue) gameObject.SetActive(MissionTracker.instance.level != 0);
+        IEnumerator start() {
+            if (hasDelay) yield return new WaitForSeconds(2);
+            gameObject.SetActive(MissionTracker.instance.level != 0);
+        }
+        if (isContinue)
+        {
+            StartCoroutine(start());
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
