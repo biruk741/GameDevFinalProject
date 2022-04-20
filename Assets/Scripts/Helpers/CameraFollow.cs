@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     private bool turnedRight = true;
     private bool turnedUp = true;
+    public bool fancyCamera = true;
     [SerializeField] private Transform target;
     // Start is called before the first frame update
     void Start()
@@ -33,8 +34,16 @@ public class CameraFollow : MonoBehaviour
         {
             turnedUp = true;
         }
-        currentPos.x = !turnedRight ? smoothPosition.x-1 : smoothPosition.x +1;
-        currentPos.y = !turnedUp ? smoothPosition.y-0.07f : smoothPosition.y +0.07f;
+        if (fancyCamera)
+        {
+            currentPos.x = !turnedRight ? smoothPosition.x - 1 : smoothPosition.x + 1;
+            currentPos.y = !turnedUp ? smoothPosition.y - 0.07f : smoothPosition.y + 0.07f;
+        }
+        else {
+            currentPos.x = smoothPosition.x;
+            currentPos.y = smoothPosition.y;
+        }
+
         transform.position = currentPos;
     }
 }
