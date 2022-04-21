@@ -43,7 +43,7 @@ public class basketball : MonoBehaviour
             Shoot.ShootBall.numberOfBallsHitGround = Shoot.ShootBall.numberOfBallsHitGround + 1;
             if (Shoot.ShootBall.numberOfBallsHitGround / Score.GetScore.counter == 1)
             {
-                Score.GetScore.counter += 2;
+                Score.GetScore.counter += 4;
                 var dialogtext = Score.GetScore.dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
                 dialogtext.text = Score.GetScore.text[Random.Range(0, Score.GetScore.text.Length)];
                 Score.GetScore.dialog.SetActive(true);

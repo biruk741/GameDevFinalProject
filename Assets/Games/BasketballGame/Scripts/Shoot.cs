@@ -31,7 +31,7 @@ public class Shoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(StartGame());
     }
 
     private void Awake()
@@ -77,6 +77,7 @@ public class Shoot : MonoBehaviour
                 Score.GetScore.counter = 1;
                 numberOfBallsHitGround = 0;
                 Score.GetScore.numOfScorePerRound = 0;
+                Score.GetScore.counter = 1;
                 DisableMovement = false;
 
             });
@@ -103,12 +104,21 @@ public class Shoot : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame()
+    IEnumerator StartGame()
     {
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Game Has Started";
+        dialog.SetActive(true);
+        yield return new WaitForSeconds(2);
+        dialogtext.text = "Score More Than Me To Win";
+        yield return new WaitForSeconds(2);
         startGame = true;
         gameStarted.SetActive(false);
-
+        yield return null;
     }
+
+
+
 
     public void EndGame()
     {
@@ -118,21 +128,21 @@ public class Shoot : MonoBehaviour
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Lose";
             dialog.SetActive(true);
-            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "I Knew You Would Lose";
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
            
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) > int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Win";
             dialog.SetActive(true);
-            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Wow You Actually Won";
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Win";
  
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) == int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "Tie Game";
             dialog.SetActive(true);
-            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Did Not Expect To Tie";
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "We Tied So Try Again";
         }
     
         restartGame.SetActive(true);

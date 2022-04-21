@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class Spawn : MonoBehaviour
 {
     public float width = 7f;
@@ -24,6 +24,7 @@ public class Spawn : MonoBehaviour
     public Visibility startGame;
     public bool GameStarted;
     public AudioClip[] clipArray;
+    public GameObject dialog;
 
     private void Awake()
     {
@@ -41,8 +42,9 @@ public class Spawn : MonoBehaviour
         NotesToSpawn = Mathf.FloorToInt(audioSource.clip.length / songSegmentLength);
         SpawnNotes();
         noteSpawnStartPosY = height;
+        StartCoroutine(StartGame()); 
 
-        
+
     }
     
     private void OnDrawGizmos()
@@ -120,10 +122,17 @@ public class Spawn : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void StartGame()
+    IEnumerator StartGame()
     {
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Game Has Started";
+        dialog.SetActive(true);
+        yield return new WaitForSeconds(1);
+        dialogtext.text = "Press All Black Keys With No Mistakes To Win";
+        yield return new WaitForSeconds(2);
         startGame.Visible = false;
         GameStarted = true;
+        yield return null;
     }
 
     public IEnumerator EndGame()

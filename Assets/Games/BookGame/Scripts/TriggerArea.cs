@@ -7,7 +7,6 @@ public class TriggerArea : MonoBehaviour
     public string tag;
     public GameObject bookMessage;
     public GameObject Score;
-    public GameObject dialog;
     public string[] text;
     // Start is called before the first frame update
     void Start()
@@ -26,9 +25,9 @@ public class TriggerArea : MonoBehaviour
         spawnbooks.Instance.bookDropCounter = spawnbooks.Instance.bookDropCounter + 1;
         if (spawnbooks.Instance.bookDropCounter / PressButton.Instance.countertext == 1)
         {
-            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            var dialogtext = Timer.Instance.dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = text[Random.Range(0, text.Length)];
-            dialog.SetActive(true);
+            Timer.Instance.dialog.SetActive(true);
             PressButton.Instance.countertext = 3 + PressButton.Instance.countertext;
         }
         if (collision.gameObject.tag ==  tag)

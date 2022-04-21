@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] public TextMeshProUGUI uiText;
     public GameObject restartButton;
-
+    public GameObject dialog;
     public int Duration;
 
     private int remainingDuration;
@@ -27,6 +27,11 @@ public class Timer : MonoBehaviour, IPointerClickHandler
     {
         Instance = this;
 
+    }
+
+    private void Start()
+    {
+        StartCoroutine(BeginGame());
     }
 
 
@@ -59,14 +64,26 @@ public class Timer : MonoBehaviour, IPointerClickHandler
        // PressButton.Instance.spriteRenderer.color = new Color(.1981132f, .1981132f, .1981132f, 1f);
         spawnbooks.Instance.bookindicators[PressButton.Instance.randomIndex].SetActive(false);
         GameObject.Find("DropBook").SetActive(false);
-        GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Did Alright";
+        if (PressButton.Instance.Score >= 10)
+        {
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Won";
+        } else if (PressButton.Instance.Score < 10)
+        {
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
+        } 
         restartButton.SetActive(true);
         print(PressButton.Instance.Score);
 
     }
-    public void BeginGame()
+    IEnumerator BeginGame()
     {
-        GameObject.Find("StartGame").SetActive(false);
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Game Has Started";
+        dialog.SetActive(true);
+        yield return new WaitForSeconds(2);
+        dialogtext.text = "Put 10 Books In Correct Spots To Win";
+        yield return new WaitForSeconds(2);
+        //GameObject.Find("StartGame").SetActive(false);
         PressButton.Instance.startGame = true;
         GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Score: 0";
         GameObject.Find("DropBook").GetComponent<TextMeshProUGUI>().text = "Can Drop Book: Yes";
@@ -75,6 +92,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         PressButton.Instance.randomIndex = spawnbooks.Instance.GetRandomBook();
         spawnbooks.Instance.bookindicators[PressButton.Instance.randomIndex].SetActive(true);
         PressButton.Instance.bookMessage.text = "Match " + PressButton.Instance.bookText[PressButton.Instance.randomIndex].GetComponent<TextMeshProUGUI>().text + " Book";
+        yield return null;
     }
 
     public void RestartGame()

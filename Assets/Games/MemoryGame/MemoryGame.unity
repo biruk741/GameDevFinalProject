@@ -658,19 +658,21 @@ MonoBehaviour:
   dialog: {fileID: 6709979460233395516}
   textShow: 2
   text:
-  - YOU ARE GOOD
-  - KEEP GOING
-  - KEEP MATCHING THE CARDS
-  - I NEVER SEEN SOMEONE AS GOOD AS YOU
-  - HAVE YOU PLAYED THIS GAME BEFORE
-  - YOUR SKILLS ARE TOO GOOD
-  - YOU ARE GOING SO FAST
-  - YOU MUST HAVE GOOD MEMORY
-  - YOU ARE VERY SKILLED
-  - ALMOST DONE
-  - TRY TO KEEP THE SCORE LOW
-  - 'WOW THE SCORE IS LOW '
-  - TRY TO FLIP ONE CARD AT A TIME
+  - You Are Good
+  - Keep Going
+  - Wow You Are Matching Them Quickly
+  - You Must Be A Prodigy
+  - Have You Played Before
+  - You Are Too Good
+  - You Are Going Fast
+  - Must Have A Good Memory
+  - So Skilled
+  - Almost Done
+  - Keep The Score Low
+  - Wow The Score Is Low
+  - Try To Flip One Card At A Time
+  - It Is Sunny Because Of You
+  - How Are You So Good
 --- !u!4 &1500627839
 Transform:
   m_ObjectHideFlags: 0
@@ -1036,6 +1038,10 @@ PrefabInstance:
     - target: {fileID: 713338022138521401, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
       propertyPath: m_text
       value: Dante
+      objectReference: {fileID: 0}
+    - target: {fileID: 713338022547939403, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}
+      propertyPath: m_wordSpacing
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0c473f2de777e4b8bf1152768a3baf, type: 3}

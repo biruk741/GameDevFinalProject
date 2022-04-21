@@ -35,7 +35,14 @@ public static System.Random rnd = new System.Random();
     List<GameObject> generatedObjects = new List<GameObject>();
     public int textShow = 1;
     public string[] text;
+    private int clickCountTries;
 
+    private void Start()
+    {
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Game Has Started";
+        dialog.SetActive(true);
+    }
     void OnEnable()
     {
         easyBtn.onClick.AddListener(() => EasySetup());
@@ -55,6 +62,9 @@ public static System.Random rnd = new System.Random();
         cardsBy = 6;
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-10.21f, -23.69f, -4268f);
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 14.ToString();
+        clickCountTries = 14;
         StartGame();
     }
 
@@ -71,6 +81,9 @@ public static System.Random rnd = new System.Random();
         numOfPictures = 16;
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-23.4f, -21.8f, -4268.07f);
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 10.ToString();
+        clickCountTries = 10;
         StartGame();
     }
 
@@ -81,8 +94,12 @@ public static System.Random rnd = new System.Random();
         GameObject.Find("NPC").transform.position = new Vector3(-19.9f, -10.46f, -4254.22f);
         //dialog.transform. = new Vector3(-170f, -127.2f, 0f);
         startCount = numOfPictures;
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 6.ToString();
+        clickCountTries = 6;
         StartGame();
     }
+
 
     private void HideButtons()
     {
@@ -158,7 +175,7 @@ public static System.Random rnd = new System.Random();
                 textShow = textShow + 2;
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
                 dialogtext.text = text[Random.Range(0, text.Length)];
-                dialog.SetActive(true);
+               
             }
         }
 
@@ -177,7 +194,7 @@ public static System.Random rnd = new System.Random();
                 textShow = textShow + 2;
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
                 dialogtext.text = text[Random.Range(0, text.Length)];
-                dialog.SetActive(true);
+               
             }
             if (index == startCount/2)
             {
@@ -186,14 +203,26 @@ public static System.Random rnd = new System.Random();
                     Destroy(obj);
                 }
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = "WOW YOU ARE AMAZING";
+                dialogtext.text = "You Won";
                 winnerPraised.GetComponent<ElementVisible>().Visible = true;
                 playAgain.GetComponent<ElementVisible>().Visible = true;
 
 
             }
         }
-       
+        if (clickCount > clickCountTries)
+        {
+        
+            foreach (var obj in generatedObjects)
+            {
+                Destroy(obj);
+            }
+            var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = "Try Again";
+            winnerPraised.GetComponent<Text>().text = "Try Again";
+            winnerPraised.GetComponent<ElementVisible>().Visible = true;
+            playAgain.GetComponent<ElementVisible>().Visible = true;
+        }
     }
     public void PlayAgain()
     {
