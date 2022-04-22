@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - book 2
+  - book 4
+  - book 5
+  - book 3
+  - Note
+  - basketball
+  - book 1
+  - RimBar
+  - yellowlocation
+  - redlocation
+  - bluelocation
+  - purplelocation
+  - greenlocation
+  - AudioSource
   layers:
   - Default
   - TransparentFX
@@ -12,7 +26,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Names
   - 
   - 
   - 
@@ -40,4 +54,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Shelf
+    uniqueID: 2194440333
     locked: 0
