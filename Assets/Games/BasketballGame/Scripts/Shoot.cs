@@ -28,6 +28,7 @@ public class Shoot : MonoBehaviour
     public GameObject outcome;
     public bool DisableMovement = false;
     public GameObject dialog;
+    public AudioSource backgroundSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,9 +67,9 @@ public class Shoot : MonoBehaviour
             roundNumber = roundNumber + 1;
             periodTxt.text = roundNumber.ToString();
             Rounds.GetComponentInChildren<Text>().text = "Round " + roundNumber.ToString();
-
             Rounds.SetActive(true);
             DisableMovement = true;
+            backgroundSound.Stop();
             Score.GetScore.Wait(3, () =>
             {
                
@@ -79,6 +80,7 @@ public class Shoot : MonoBehaviour
                 Score.GetScore.numOfScorePerRound = 0;
                 Score.GetScore.counter = 1;
                 DisableMovement = false;
+                backgroundSound.Play();
 
             });
         }
@@ -113,6 +115,7 @@ public class Shoot : MonoBehaviour
         dialogtext.text = "Score More Than Me To Win";
         yield return new WaitForSeconds(2);
         startGame = true;
+        backgroundSound.Play();
         gameStarted.SetActive(false);
         yield return null;
     }
@@ -123,6 +126,7 @@ public class Shoot : MonoBehaviour
     public void EndGame()
     {
         endGame = true;
+        
         if (int.Parse(Score.GetScore.clickCountTxt.text) < int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
@@ -144,7 +148,7 @@ public class Shoot : MonoBehaviour
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "We Tied So Try Again";
         }
-    
+        backgroundSound.Stop();
         restartGame.SetActive(true);
 
     }

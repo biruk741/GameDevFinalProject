@@ -7,6 +7,7 @@ public class basketball : MonoBehaviour
     Rigidbody2D rb;
     bool hasCollided = false;
     public bool hitRim;
+    public AudioSource groundSound;
 
     public static basketball GetBasketball { get; private set; }
 
@@ -37,6 +38,9 @@ public class basketball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.name == "Ground") {
+            groundSound.Play();
+        }
         if (collision.gameObject.name == "Ground" && hasCollided == false)
         {
             hasCollided = true;

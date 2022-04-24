@@ -12,6 +12,7 @@ public class Score : MonoBehaviour
     public GameObject dialog;
     public int counter = 1;
     public string[] text;
+    public AudioSource netSound;
     public static Score GetScore { get; private set; }
 
 
@@ -32,6 +33,7 @@ public class Score : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        netSound.Play();
         numOfScorePerRound = numOfScorePerRound + 1;
         var number = int.Parse(clickCountTxt.text.ToString());
         number = number + 1;

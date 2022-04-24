@@ -370,7 +370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.22, y: 327.1}
+  m_AnchoredPosition: {x: 131.7, y: 302.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172997690
@@ -503,6 +503,7 @@ MonoBehaviour:
   - You Shoot The Ball Well
   - What Position Do You Play
   - Such Range
+  netSound: {fileID: 0}
 --- !u!1 &263693484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190.2, y: 371}
+  m_AnchoredPosition: {x: -116.1, y: 352.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974916790
@@ -1776,7 +1777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538704138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 0, z: -24.11}
+  m_LocalPosition: {x: 2.8, y: 0, z: -21.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1997,7 +1998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.2, y: 370.3}
+  m_AnchoredPosition: {x: 277.8, y: 350.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658879492
@@ -2584,11 +2585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -248
+      value: -175.96
       objectReference: {fileID: 0}
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 143.11
+      value: 131.2
       objectReference: {fileID: 0}
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2601,6 +2602,14 @@ PrefabInstance:
     - target: {fileID: 1168288710956919101, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168288712778470137, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168288712778470137, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.30999756
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6023df841c52b0d4fafd818b994d2fa8, type: 3}
