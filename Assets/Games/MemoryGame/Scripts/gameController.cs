@@ -36,11 +36,13 @@ public static System.Random rnd = new System.Random();
     public int textShow = 1;
     public string[] text;
     private int clickCountTries;
-
+    public AudioSource beforeGameStartsAudio;
+    public AudioSource cardflipSound;
     private void Start()
     {
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
         dialogtext.text = "Game Has Started";
+        beforeGameStartsAudio.Play();
         dialog.SetActive(true);
     }
     void OnEnable()
@@ -138,10 +140,12 @@ public static System.Random rnd = new System.Random();
         if (cardUp1 == tempBox)
         {
             cardUp1 = null;
+            cardflipSound.Play();
         }
         else if (cardUp2 == tempBox)
         {
             cardUp2 = null;
+            cardflipSound.Play();
         }
     }
 
@@ -151,10 +155,12 @@ public static System.Random rnd = new System.Random();
         if (cardUp1 == null)
         {
             cardUp1 = tempBox;
+            cardflipSound.Play();
         }
         else if (cardUp2 == null)
         {
             cardUp2 = tempBox;
+            cardflipSound.Play();
         }
         else
         {
@@ -204,6 +210,7 @@ public static System.Random rnd = new System.Random();
                 }
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
                 dialogtext.text = "You Won";
+                beforeGameStartsAudio.Stop();
                 winnerPraised.GetComponent<ElementVisible>().Visible = true;
                 playAgain.GetComponent<ElementVisible>().Visible = true;
 
@@ -219,6 +226,7 @@ public static System.Random rnd = new System.Random();
             }
             var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = "Try Again";
+            beforeGameStartsAudio.Stop();
             winnerPraised.GetComponent<Text>().text = "Try Again";
             winnerPraised.GetComponent<ElementVisible>().Visible = true;
             playAgain.GetComponent<ElementVisible>().Visible = true;

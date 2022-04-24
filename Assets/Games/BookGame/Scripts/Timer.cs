@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
     public GameObject restartButton;
     public GameObject dialog;
     public int Duration;
+    public AudioSource backgroundAudio;
 
     private int remainingDuration;
 
@@ -63,6 +64,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         MeterBook.Instance.mask.fillAmount = 1;
        // PressButton.Instance.spriteRenderer.color = new Color(.1981132f, .1981132f, .1981132f, 1f);
         spawnbooks.Instance.bookindicators[PressButton.Instance.randomIndex].SetActive(false);
+        backgroundAudio.Stop();
         GameObject.Find("DropBook").SetActive(false);
         if (PressButton.Instance.Score >= 10)
         {
@@ -79,6 +81,7 @@ public class Timer : MonoBehaviour, IPointerClickHandler
     {
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
         dialogtext.text = "Game Has Started";
+        backgroundAudio.Play();
         dialog.SetActive(true);
         yield return new WaitForSeconds(2);
         dialogtext.text = "Put 10 Books In Correct Spots To Win";
