@@ -8,7 +8,8 @@ public class noteaction : MonoBehaviour
     public int scorepoints = 1;
     public int index;
     public float noteSpeed;
-
+    public AudioSource missedAudio;
+    public AudioClip[] clipArray;
     public int Id { get; set; }
     public bool Played { get; set; }
     private bool visible;
@@ -71,6 +72,9 @@ public class noteaction : MonoBehaviour
             {
                 StartCoroutine(Spawn.Instance.EndGame());
                 animator.Play("Missed");
+                var song = clipArray[Random.Range(0, clipArray.Length)];
+                missedAudio.clip = song;
+                missedAudio.Play();
             }
         }
 
