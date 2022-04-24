@@ -8,7 +8,7 @@ public class Book : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class Book : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision) //Make sure to put this out of Voids
     {
         bookSound.Play();
     }
