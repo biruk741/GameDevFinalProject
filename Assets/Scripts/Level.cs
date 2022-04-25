@@ -20,10 +20,11 @@ public class Level : MonoBehaviour
     private void Refresh()
     {
         bool levelMatch = MissionTracker.instance.level == level;
+        print("Mission tacker instance = " + MissionTracker.instance.level + " and level = " + level);
         gameObject.SetActive(levelMatch);
         if(levelMatch && MinimapPointer.instance != null)
         {
-
+            print("Minimappointer is not null = " + (levelMatch && MinimapPointer.instance != null) + " for mission " + level);
             MinimapPointer.instance.SetDestination(levelDestination);
         }
     }

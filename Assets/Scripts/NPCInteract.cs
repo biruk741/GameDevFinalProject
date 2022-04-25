@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCInteract : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NPCInteract : MonoBehaviour
     public DialogueTrigger trigger;
     public Destination destination;
     public bool interactible = false;
+    public string goToScene = "";
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +20,14 @@ public class NPCInteract : MonoBehaviour
         interactText.text = "";
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        print("KeyDown = " + Input.GetKeyDown(KeyCode.E) + "interactible = " + interactible);
         if (Input.GetKeyDown(KeyCode.E) && interactible) {
             trigger.TriggerDialogue();
             interactText.text = "";
             MissionTracker.instance.level++;
+            if (goToScene.Length > 0) SceneManager.LoadScene(goToScene);
         }
     }
 
