@@ -6,7 +6,8 @@ public class MissionTracker
 {
     public enum LEVEL {
         TALK_TO_COOKIE,
-        TALK_TO_DANTE
+        TALK_TO_DANTE,
+        GO_TO_STUDENT_CENTER
     }
     private static MissionTracker _instance;
     public static MissionTracker instance{

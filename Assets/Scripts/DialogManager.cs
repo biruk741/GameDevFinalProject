@@ -10,14 +10,11 @@ public class DialogManager : MonoBehaviour
 
 	public Animator animator;
 
-	private Queue<string> sentences;
+	private Queue<string> sentences = new Queue<string>();
 	private Dialogue dialogue;
 
 	// Use this for initialization
-	void Start()
-	{
-		sentences = new Queue<string>();
-	}
+
 
 	public void StartDialogue(Dialogue dialogue)
 	{
