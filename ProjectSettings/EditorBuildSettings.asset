@@ -14,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StoryTelling.unity
     guid: 06008f1b222467b40ac8b9d39d7d7bb2
+  - enabled: 1
+    path: Assets/Scenes/ComputerDungeon.unity
+    guid: d4df2e0cf165cda41bc6da634fc91ba8
+  - enabled: 1
+    path: Assets/Scenes/HFAPracRoomScene.unity
+    guid: c8746f093b487404fab8a2f71346f2f7
+  - enabled: 1
+    path: Assets/Scenes/IndyHall.unity
+    guid: 98048c92a85a19747b0bcbd9e5733479
+  - enabled: 1
+    path: Assets/Scenes/LibraryArchivesScene.unity
+    guid: 66397009c44716c4abcde8e6e3388212
+  - enabled: 1
+    path: Assets/Scenes/StudentCenter.unity
+    guid: 24c9d1e4a15732a43a5c2effce178b8e
+  - enabled: 1
+    path: Assets/Scenes/TunnelScene.unity
+    guid: c4a689c7c9921e1408cc1735a178c8b8
   m_configObjects: {}
