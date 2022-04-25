@@ -133,23 +133,32 @@ public class Shoot : MonoBehaviour
             outcome.GetComponentInChildren<Text>().text = "You Lose";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
-           
+            restartGame.SetActive(true);
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) > int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "You Win";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Win";
- 
+            StartCoroutine(WaitForSceneLoad());
+
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) == int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
             outcome.GetComponentInChildren<Text>().text = "Tie Game";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "We Tied So Try Again";
+            restartGame.SetActive(true);
         }
         backgroundSound.Stop();
-        restartGame.SetActive(true);
+     
+
+    }
+
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("CSCGym");
 
     }
 

@@ -69,11 +69,14 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         if (PressButton.Instance.Score >= 10)
         {
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Won";
+            StartCoroutine(WaitForSceneLoad());
+            
         } else if (PressButton.Instance.Score < 10)
         {
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
+            restartButton.SetActive(true);
         } 
-        restartButton.SetActive(true);
+   
         print(PressButton.Instance.Score);
 
     }
@@ -101,5 +104,11 @@ public class Timer : MonoBehaviour, IPointerClickHandler
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("LibraryArchivesScene");
+
     }
 }
