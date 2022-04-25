@@ -22,7 +22,6 @@ public class NPCInteract : MonoBehaviour
 
     private void Update()
     {
-        print("KeyDown = " + Input.GetKeyDown(KeyCode.E) + "interactible = " + interactible);
         if (Input.GetKeyDown(KeyCode.E) && interactible) {
             trigger.TriggerDialogue();
             interactText.text = "";
