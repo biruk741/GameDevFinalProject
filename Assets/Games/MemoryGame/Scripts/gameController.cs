@@ -7,7 +7,7 @@ using TMPro;
 public class gameController : MonoBehaviour
 {
     public GameObject box;
-    public Text clickCountTxt;
+    public TextMeshProUGUI clickCountTxt;
     List<int> frontList = new List<int>{ 0, 1, 2, 3, 0, 1, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11};
 public static System.Random rnd = new System.Random();
     public int shuffleIndex = 0;
@@ -24,7 +24,7 @@ public static System.Random rnd = new System.Random();
     private int clickCount = 0;
     float Scale = 4;
     int index = 0;
-    public Text winnerPraised;
+    public GameObject winnerPraised;
     public Button playAgain;
     float xPosition = -15f;
     float changeX = 10f;
@@ -208,12 +208,14 @@ public static System.Random rnd = new System.Random();
                 {
                     Destroy(obj);
                 }
-                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = "Wow You Actually Won";
-                beforeGameStartsAudio.Stop();
-                StartCoroutine(WaitForSceneLoad());
-                winnerPraised.GetComponent<ElementVisible>().Visible = true;
+                if (clickCount <= clickCountTries) {
+                    var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                    dialogtext.text = "Wow You Actually Won";
+                    beforeGameStartsAudio.Stop();
+                    StartCoroutine(WaitForSceneLoad());
+                    winnerPraised.GetComponent<ElementVisible>().Visible = true;
 
+                }
 
 
             }
@@ -228,7 +230,7 @@ public static System.Random rnd = new System.Random();
             var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = "Try Again";
             beforeGameStartsAudio.Stop();
-            winnerPraised.GetComponent<Text>().text = "You Lose";
+            winnerPraised.GetComponent<TextMeshProUGUI>().text = "You Lose";
             winnerPraised.GetComponent<ElementVisible>().Visible = true;
             playAgain.GetComponent<ElementVisible>().Visible = true;
         }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Score : MonoBehaviour
 {
-    public Text clickCountTxt;
+    public TextMeshProUGUI clickCountTxt;
     public GameObject PlusOnePoint;
     public GameObject OnFire;
     public int numOfScorePerRound = 0;
