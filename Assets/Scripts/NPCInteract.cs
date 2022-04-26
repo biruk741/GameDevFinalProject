@@ -10,6 +10,7 @@ public class NPCInteract : MonoBehaviour
     public Destination destination;
     public bool interactible = false;
     public string goToScene = "";
+    public bool beginGame = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class NPCInteract : MonoBehaviour
             MissionTracker.instance.level++;
             if (goToScene.Length > 0) SceneManager.LoadScene(goToScene);
         }
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

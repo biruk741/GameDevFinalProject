@@ -23,8 +23,8 @@ public class Shoot : MonoBehaviour
     public GameObject Rounds;
     public bool beginNewRound;
     public Queue<GameObject> ballQueue = new Queue<GameObject>();
-    public Text periodTxt;
-    public Text opponentScore;
+    public TextMeshProUGUI periodTxt;
+    public TextMeshProUGUI opponentScore;
     public GameObject outcome;
     public bool DisableMovement = false;
     public GameObject dialog;
@@ -66,7 +66,7 @@ public class Shoot : MonoBehaviour
             opponentScore.text = increaseOpponentScore.ToString();
             roundNumber = roundNumber + 1;
             periodTxt.text = roundNumber.ToString();
-            Rounds.GetComponentInChildren<Text>().text = "Round " + roundNumber.ToString();
+            Rounds.GetComponentInChildren<TextMeshProUGUI>().text = "Round " + roundNumber.ToString();
             Rounds.SetActive(true);
             DisableMovement = true;
             backgroundSound.Stop();
@@ -130,26 +130,35 @@ public class Shoot : MonoBehaviour
         if (int.Parse(Score.GetScore.clickCountTxt.text) < int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
-            outcome.GetComponentInChildren<Text>().text = "You Lose";
+            outcome.GetComponentInChildren<TextMeshProUGUI>().text = "You Lose";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
-           
+            restartGame.SetActive(true);
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) > int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
-            outcome.GetComponentInChildren<Text>().text = "You Win";
+            outcome.GetComponentInChildren<TextMeshProUGUI>().text = "You Win";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Win";
- 
+            StartCoroutine(WaitForSceneLoad());
+
         } else if (int.Parse(Score.GetScore.clickCountTxt.text) == int.Parse(opponentScore.text))
         {
             outcome.SetActive(true);
-            outcome.GetComponentInChildren<Text>().text = "Tie Game";
+            outcome.GetComponentInChildren<TextMeshProUGUI>().text = "Tie Game";
             dialog.SetActive(true);
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "We Tied So Try Again";
+            restartGame.SetActive(true);
         }
         backgroundSound.Stop();
-        restartGame.SetActive(true);
+     
+
+    }
+
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("CSCGym");
 
     }
 
