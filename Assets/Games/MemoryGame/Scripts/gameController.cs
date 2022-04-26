@@ -65,8 +65,8 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-10.21f, -23.69f, -4268f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 14.ToString();
-        clickCountTries = 14;
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 20.ToString();
+        clickCountTries = 20;
         StartGame();
     }
 
@@ -84,8 +84,8 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-23.4f, -21.8f, -4268.07f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 10.ToString();
-        clickCountTries = 10;
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 14.ToString();
+        clickCountTries = 14;
         StartGame();
     }
 
@@ -97,8 +97,8 @@ public static System.Random rnd = new System.Random();
         //dialog.transform. = new Vector3(-170f, -127.2f, 0f);
         startCount = numOfPictures;
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 6.ToString();
-        clickCountTries = 6;
+        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 8.ToString();
+        clickCountTries = 8;
         StartGame();
     }
 
@@ -209,10 +209,11 @@ public static System.Random rnd = new System.Random();
                     Destroy(obj);
                 }
                 var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = "You Won";
+                dialogtext.text = "Wow You Actually Won";
                 beforeGameStartsAudio.Stop();
+                StartCoroutine(WaitForSceneLoad());
                 winnerPraised.GetComponent<ElementVisible>().Visible = true;
-                playAgain.GetComponent<ElementVisible>().Visible = true;
+
 
 
             }
@@ -227,7 +228,7 @@ public static System.Random rnd = new System.Random();
             var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = "Try Again";
             beforeGameStartsAudio.Stop();
-            winnerPraised.GetComponent<Text>().text = "Try Again";
+            winnerPraised.GetComponent<Text>().text = "You Lose";
             winnerPraised.GetComponent<ElementVisible>().Visible = true;
             playAgain.GetComponent<ElementVisible>().Visible = true;
         }
@@ -235,5 +236,11 @@ public static System.Random rnd = new System.Random();
     public void PlayAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("OutdoorsScene");
+
     }
 }

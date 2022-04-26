@@ -68,12 +68,18 @@ public class Timer : MonoBehaviour, IPointerClickHandler
         GameObject.Find("DropBook").SetActive(false);
         if (PressButton.Instance.Score >= 10)
         {
-            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "You Won";
+            GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Wow You Actually Won";
+            uiText.text = "";
+            GameObject.Find("BookMessage").GetComponent<TextMeshProUGUI>().text = "";
+            GameObject.Find("GameOutcome").GetComponent<TextMeshProUGUI>().text = "You Won";
             StartCoroutine(WaitForSceneLoad());
             
         } else if (PressButton.Instance.Score < 10)
         {
             GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>().text = "Try Again";
+            uiText.text = "";
+            GameObject.Find("BookMessage").GetComponent<TextMeshProUGUI>().text = "";
+            GameObject.Find("GameOutcome").GetComponent<TextMeshProUGUI>().text = "You Lose";
             restartButton.SetActive(true);
         } 
    
