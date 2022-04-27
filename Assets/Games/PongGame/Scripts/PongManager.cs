@@ -14,8 +14,11 @@ public class PongManager : MonoBehaviour
     [SerializeField] private TMP_Text rightScoreText;
 
     [SerializeField] private TMP_Text winText;
-    [SerializeField] private bool GameEnd = false;
-
+    [SerializeField] public bool GameEnd = false;
+    public string[] dialoguearray;
+    public GameObject dialog;
+    private int score;
+    private int dialogcounter;
     private int leftScore = 0;
     private int rightScore = 0;
 
@@ -23,9 +26,16 @@ public class PongManager : MonoBehaviour
     [SerializeField] private int maxScore;
 
     private WaitForSecondsRealtime endDelay = new WaitForSecondsRealtime(3);
-
+    public static PongManager pongManager { get; private set; }
 
     private void Awake()
+    {
+        pongManager = this;
+        dialogcounter = 1;
+        score = 0;
+    }
+
+    public void beginGame()
     {
         if (GameEnd == false)
         {
@@ -41,6 +51,7 @@ public class PongManager : MonoBehaviour
                     leftScore++;
                     leftScoreText.text = leftScore.ToString();
                     ball.Restart();
+                    score++;
                 }
 
             };
@@ -55,6 +66,7 @@ public class PongManager : MonoBehaviour
                     rightScore++;
                     rightScoreText.text = rightScore.ToString();
                     ball.Restart();
+                    score++;
                 }
             };
             ball.Restart();
@@ -80,19 +92,24 @@ public class PongManager : MonoBehaviour
             Time.timeScale = 1;
             if (leftScore > rightScore)
             {
-                StartCoroutine(WaitForSceneLoad());
+                var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = "Wow You Are Amazing";
+                StartCoroutine(WaitForSceneLoad("IndyHall"));
             } else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                dialogtext.text = "Try Again";
+                StartCoroutine(WaitForSceneLoad(SceneManager.GetActiveScene().name));
             }
             GameEnd = true;
+            yield return null;
         }
         StartCoroutine(win());
     }
-    private IEnumerator WaitForSceneLoad()
+    private IEnumerator WaitForSceneLoad(string n)
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("IndyHall");
+        SceneManager.LoadScene(n);
 
     }
 
@@ -105,6 +122,11 @@ public class PongManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (score / dialogcounter == 1)
+        {
+            var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
+            dialogtext.text = dialoguearray[Random.Range(0, dialoguearray.Length)];
+            dialogcounter = 3 + dialogcounter;
+        }
     }
 }

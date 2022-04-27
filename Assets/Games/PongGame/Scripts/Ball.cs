@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Ball : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigidBody;
@@ -12,13 +12,17 @@ public class Ball : MonoBehaviour
     [SerializeField] private AudioSource goalSound;
     [SerializeField] private SpriteRenderer renderer;
     [SerializeField] private bool gameEnd = false;
-
+    [SerializeField] private bool startGame = false;
+    public GameObject dialog;
 
     private WaitForSeconds beginDelay = new WaitForSeconds(1);
 
 
     public void Restart() {
-        StartCoroutine(moveBall());
+        if (startGame == true)
+        {
+            StartCoroutine(moveBall());
+        }
     }
     public void endBallMovement()
     {
@@ -70,14 +74,35 @@ public class Ball : MonoBehaviour
         {
             bounceEdge.Play();
         }
+
+        
+    }
+    IEnumerator StartGame()
+    {
+        var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+        dialogtext.text = "Game Has Started";
+        dialog.SetActive(true);
+        yield return new WaitForSeconds(1);
+        dialogtext.text = "Beat Me At Pong To Win The Game";
+        yield return new WaitForSeconds(2);
+        startGame = true;
+        yield return null;
+        PongManager.pongManager.beginGame();
+    }
+    private void Start()
+    {
+        StartCoroutine(StartGame());
+
     }
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        ballV();
+        if (startGame == true)
+        {
+            ballV();
+        }
 }
 
 }
