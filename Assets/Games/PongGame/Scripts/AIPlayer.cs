@@ -20,7 +20,6 @@ public class AIPlayer : MonoBehaviour
     void Update()
 
     {
-        print(transform.position.y);
         if (Ball.transform.position.y < transform.position.y || Ball.transform.position.y > transform.position.y
             && transform.position.y < maxY && transform.position.y > minY)
         {

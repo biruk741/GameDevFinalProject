@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private AudioSource bounceEdge;
     [SerializeField] private AudioSource goalSound;
     [SerializeField] private SpriteRenderer renderer;
-
+    [SerializeField] private bool gameEnd = false;
 
 
     private WaitForSeconds beginDelay = new WaitForSeconds(1);
@@ -19,6 +19,23 @@ public class Ball : MonoBehaviour
 
     public void Restart() {
         StartCoroutine(moveBall());
+    }
+    public void endBallMovement()
+    {
+        gameEnd = true;
+    }
+    public void ballV()
+    {
+        if (gameEnd == false) {
+            float velocity = rigidBody.velocity.magnitude;
+            int luminance = (int)(255 - velocity);
+            luminance = (int)(luminance >= 0 ? luminance * 0.8 : 0);
+            renderer.color = new Color(255, luminance, luminance); }
+        else
+        {
+            rigidBody.velocity = new Vector3(0, 0, 0);
+        }
+
     }
 
     IEnumerator moveBall() {
@@ -37,6 +54,7 @@ public class Ball : MonoBehaviour
         } else x = -x;
         Vector3 vector = new Vector3(x, y, 0);
         rigidBody.AddForce(vector.normalized * speed);
+       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,10 +76,8 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float velocity = rigidBody.velocity.magnitude;
 
-        int luminance = (int)(255 - velocity);
-        luminance = (int)(luminance >= 0 ?  luminance * 0.8 : 0);
-        renderer.color = new Color(255, luminance, luminance);
-    }
+        ballV();
+}
+
 }

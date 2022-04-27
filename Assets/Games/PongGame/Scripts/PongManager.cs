@@ -14,7 +14,7 @@ public class PongManager : MonoBehaviour
     [SerializeField] private TMP_Text rightScoreText;
 
     [SerializeField] private TMP_Text winText;
-
+    [SerializeField] private bool GameEnd = false;
 
     private int leftScore = 0;
     private int rightScore = 0;
@@ -27,32 +27,38 @@ public class PongManager : MonoBehaviour
 
     private void Awake()
     {
-        maxScore -= 1;
-        rightGoal.onScore += ()=> {
-            if (leftScore >= maxScore || rightScore >= maxScore)
+        if (GameEnd == false)
+        {
+            maxScore -= 1;
+            rightGoal.onScore += () =>
             {
-                Restart(1);
-            }
-            else {
-                leftScore++;
-                leftScoreText.text = leftScore.ToString();
-                ball.Restart();
-            }
+                if (leftScore >= maxScore || rightScore >= maxScore)
+                {
+                    Restart(1);
+                }
+                else
+                {
+                    leftScore++;
+                    leftScoreText.text = leftScore.ToString();
+                    ball.Restart();
+                }
 
-        };
-        leftGoal.onScore += ()=> {
-            if (leftScore >= maxScore || rightScore >= maxScore)
+            };
+            leftGoal.onScore += () =>
             {
-                Restart(2);
-            }
-            else
-            {
-                rightScore++;
-                rightScoreText.text = rightScore.ToString();
-                ball.Restart();
-            }
-        };
-        ball.Restart();
+                if (leftScore >= maxScore || rightScore >= maxScore)
+                {
+                    Restart(2);
+                }
+                else
+                {
+                    rightScore++;
+                    rightScoreText.text = rightScore.ToString();
+                    ball.Restart();
+                }
+            };
+            ball.Restart();
+        }
     }
 
     private void Restart(int winner) {
@@ -67,14 +73,27 @@ public class PongManager : MonoBehaviour
                 rightScore++;
                 rightScoreText.text = rightScore.ToString();
             }
+            ball.endBallMovement();
             Time.timeScale = 0;
-            winText.text = $"Player {(leftScore > rightScore ? 1 : 2)} won!";
+            winText.text = $" {(leftScore > rightScore ? "Player" : "Devin")} won";
             yield return endDelay;
             Time.timeScale = 1;
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (leftScore > rightScore)
+            {
+                StartCoroutine(WaitForSceneLoad());
+            } else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            GameEnd = true;
         }
         StartCoroutine(win());
+    }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("IndyHall");
+
     }
 
     // Start is called before the first frame update
