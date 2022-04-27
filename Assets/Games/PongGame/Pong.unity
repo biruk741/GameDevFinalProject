@@ -2089,7 +2089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2570dd9c160220e4a984033cb3d54778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 90
   minY: -97
   maxY: 43.32
   Ball: {fileID: 272136245}
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upKey: 119
   downKey: 115
-  speed: 70
+  speed: 90
   minY: -97
   maxY: 43.32
 --- !u!1 &1489508113

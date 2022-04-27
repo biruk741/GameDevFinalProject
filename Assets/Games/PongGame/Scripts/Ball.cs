@@ -74,24 +74,35 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("Player1"))
         {
             bouncePlayer.Play();
-            var paddleCenter = GameObject.Find("PlayerRight").transform.position.y + (GameObject.Find("PlayerRight").GetComponent<SpriteRenderer>().bounds.size.y / 2);
-            var d = paddleCenter - transform.position.y;
-            Vector3 v = rigidBody.velocity;
-            v.x += d * -0.1f;
-            v.y *= -1;
-            rigidBody.velocity = v;
+            float y = launchAngle(transform.position,
+                              GameObject.Find("PlayerRight").GetComponent<Collider2D>().transform.position,
+                              GameObject.Find("PlayerRight").GetComponent<Collider2D>().bounds.size.y);
+
+            //set angle and speed
+            Vector2 d = new Vector2(1, y).normalized;
+            print(d);
+            rigidBody.velocity = d * 250f;
         }
         if (collision.gameObject.CompareTag("Player2"))
         {
             bouncePlayer.Play();
-            var paddleCenter = GameObject.Find("PlayerLeft").transform.position.y + (GameObject.Find("PlayerRight").GetComponent<SpriteRenderer>().bounds.size.y / 2);
-            var d = paddleCenter - transform.position.y;
-            Vector3 v = rigidBody.velocity;
-            v.x += d * -0.1f;
-            v.y *= -1;
-            rigidBody.velocity = v;
+            bouncePlayer.Play();
+            float y = launchAngle(transform.position,
+                              GameObject.Find("PlayerLeft").GetComponent<Collider2D>().transform.position,
+                              GameObject.Find("PlayerLeft").GetComponent<Collider2D>().bounds.size.y);
+
+            //set angle and speed
+            Vector2 d = new Vector2(1, y).normalized;
+            rigidBody.velocity = d * 250f;
+ 
         }
 
+    }
+
+    float launchAngle(Vector2 ball, Vector2 paddle,
+                float paddleHeight)
+    {
+        return (ball.y - paddle.y) / paddleHeight;
     }
     IEnumerator StartGame()
     {
@@ -113,7 +124,7 @@ public class Ball : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (startGame == true)
         {
