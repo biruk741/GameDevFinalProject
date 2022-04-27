@@ -1442,15 +1442,15 @@ RectTransform:
   m_GameObject: {fileID: 318703572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.71586, y: 0.71586, z: 0.71586}
+  m_LocalScale: {x: 0.31428885, y: 0.31428885, z: 0.31428885}
   m_Children: []
-  m_Father: {fileID: 331265314}
-  m_RootOrder: 0
+  m_Father: {fileID: 678220274}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19, y: 3}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 103.68993, y: -17.789055}
+  m_SizeDelta: {x: -198.62, y: -73.486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318703574
 MonoBehaviour:
@@ -1578,15 +1578,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4390368, y: 0.4390368, z: 0.4390368}
-  m_Children:
-  - {fileID: 318703573}
+  m_Children: []
   m_Father: {fileID: 678220274}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 112.03165, y: -19.10617}
-  m_SizeDelta: {x: 136.24, y: 30}
+  m_SizeDelta: {x: 135.32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331265315
 MonoBehaviour:
@@ -1632,7 +1631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1175844470}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -1778,11 +1777,6 @@ PrefabInstance:
 --- !u!4 &341994130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 133276526296216483, guid: ff14ade85b694384a9e1a708f549faa6, type: 3}
-  m_PrefabInstance: {fileID: 341994129}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &341994131 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 133276526296216485, guid: ff14ade85b694384a9e1a708f549faa6, type: 3}
   m_PrefabInstance: {fileID: 341994129}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &367280340
@@ -4240,7 +4234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -4556,14 +4550,15 @@ RectTransform:
   m_Children:
   - {fileID: 420044055}
   - {fileID: 647869194}
+  - {fileID: 318703573}
   - {fileID: 331265314}
   m_Father: {fileID: 571118872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 299, y: -452}
-  m_SizeDelta: {x: 333.94, y: 100}
+  m_AnchoredPosition: {x: 304, y: -415.96}
+  m_SizeDelta: {x: 333.94, y: 103.486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &678220275
 Animator:
@@ -8479,7 +8474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858461963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96, y: 2.57, z: -2}
+  m_LocalPosition: {x: 1.96, y: 2.57, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8572,15 +8567,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.character1Name
-      value: Isabelle
+      value: Machine
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: 2Hey, are you Isabelle?
+      value: 1Here is a BluePill for your trouble
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
@@ -9331,9 +9326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a1ece9d2f754438ca6be54ffdc272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
-  animator: {fileID: 341994131}
+  nameText: {fileID: 420044056}
+  dialogueText: {fileID: 647869195}
+  animator: {fileID: 678220275}
 --- !u!4 &1175844471
 Transform:
   m_ObjectHideFlags: 0
