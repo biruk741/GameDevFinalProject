@@ -62,10 +62,7 @@ public class Ball : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player")) {
-            bouncePlayer.Play();
-        }
+    { 
         if (collision.gameObject.CompareTag("Goal"))
         {
             goalSound.Play();
@@ -74,8 +71,27 @@ public class Ball : MonoBehaviour
         {
             bounceEdge.Play();
         }
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            bouncePlayer.Play();
+            var paddleCenter = GameObject.Find("PlayerRight").transform.position.y + (GameObject.Find("PlayerRight").GetComponent<SpriteRenderer>().bounds.size.y / 2);
+            var d = paddleCenter - transform.position.y;
+            Vector3 v = rigidBody.velocity;
+            v.x += d * -0.1f;
+            v.y *= -1;
+            rigidBody.velocity = v;
+        }
+        if (collision.gameObject.CompareTag("Player2"))
+        {
+            bouncePlayer.Play();
+            var paddleCenter = GameObject.Find("PlayerLeft").transform.position.y + (GameObject.Find("PlayerRight").GetComponent<SpriteRenderer>().bounds.size.y / 2);
+            var d = paddleCenter - transform.position.y;
+            Vector3 v = rigidBody.velocity;
+            v.x += d * -0.1f;
+            v.y *= -1;
+            rigidBody.velocity = v;
+        }
 
-        
     }
     IEnumerator StartGame()
     {

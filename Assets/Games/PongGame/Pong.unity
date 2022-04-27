@@ -730,7 +730,7 @@ MonoBehaviour:
   startPos: {fileID: 2138993812}
   bouncePlayer: {fileID: 272136251}
   bounceEdge: {fileID: 272136253}
-  goalSound: {fileID: 272136252}
+  goalSound: {fileID: 272136253}
   renderer: {fileID: 272136248}
   gameEnd: 0
   startGame: 0
@@ -742,10 +742,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272136245}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: da93a59aeb9b9bf44b3dd670a187d5f7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6902116569c317340b7adf4a799e5275, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.652
   m_Pitch: 1
@@ -1360,12 +1360,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1813,7 +1813,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   - Your Swings Are Powerful
   - You Are So Focused
   dialog: {fileID: 165853574}
-  maxScore: 1
+  maxScore: 5
 --- !u!82 &1107690559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2072,7 +2072,7 @@ GameObject:
   - component: {fileID: 1134805421}
   m_Layer: 0
   m_Name: PlayerRight
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2093,8 +2093,8 @@ MonoBehaviour:
   minY: -97
   maxY: 43.32
   Ball: {fileID: 272136245}
---- !u!58 &1134805421
-CircleCollider2D:
+--- !u!70 &1134805421
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2106,9 +2106,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.795858, y: 0.001625379}
-  serializedVersion: 2
-  m_Radius: 0.58367795
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!212 &1134805422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2512,16 +2512,16 @@ GameObject:
   - component: {fileID: 1471578313}
   - component: {fileID: 1471578312}
   - component: {fileID: 1471578314}
-  - component: {fileID: 1471578311}
+  - component: {fileID: 1471578310}
   m_Layer: 0
   m_Name: PlayerLeft
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &1471578311
-CircleCollider2D:
+--- !u!70 &1471578310
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2533,9 +2533,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.6713665, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5308418
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!212 &1471578312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2868,11 +2868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_LocalScale.z
@@ -2908,11 +2908,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 394.93
+      value: 678.6
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -273.3
+      value: -465.1
       objectReference: {fileID: 0}
     - target: {fileID: 2655622863020829028, guid: 9117dcc31dbc564448fde06c449bb754, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
