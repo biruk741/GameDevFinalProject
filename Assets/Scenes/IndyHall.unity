@@ -3643,7 +3643,7 @@ GameObject:
   - component: {fileID: 967870379}
   - component: {fileID: 967870378}
   m_Layer: 0
-  m_Name: Cookie
+  m_Name: Devin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
