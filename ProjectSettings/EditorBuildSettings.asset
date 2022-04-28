@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/PianoGame/PianoGame.unity
     guid: d013078dd4ea5a44ba2427e9019e4d78
+  - enabled: 1
+    path: Assets/Games/PongGame/Pong.unity
+    guid: 067efb7e068ca58458bb60b87c4b4dcb
+  - enabled: 1
+    path: Assets/Games/BasketballGame/BasketballGame.unity
+    guid: a70818a9060174441981631ca4fe6094
   m_configObjects: {}
