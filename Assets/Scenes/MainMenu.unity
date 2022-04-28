@@ -367,10 +367,10 @@ RectTransform:
   m_Children:
   - {fileID: 1283641719}
   - {fileID: 1558522547}
-  - {fileID: 814257661}
-  - {fileID: 814258582}
   - {fileID: 562549155}
+  - {fileID: 814257661}
   - {fileID: 646760769}
+  - {fileID: 814258582}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -398,6 +398,7 @@ MonoBehaviour:
   ControlsUI: {fileID: 814258581}
   ExitButton: {fileID: 1558522548}
   OptionsButton: {fileID: 0}
+  SkipStoryButton: {fileID: 0}
   playIndicator: {fileID: 589558826}
   optionsIndicator: {fileID: 1393451546}
   exitIndicator: {fileID: 168406318}
@@ -500,7 +501,7 @@ RectTransform:
   - {fileID: 1325794043}
   - {fileID: 589558829}
   m_Father: {fileID: 199815905}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -697,7 +698,7 @@ RectTransform:
   - {fileID: 1075425070}
   - {fileID: 134023809}
   m_Father: {fileID: 199815905}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -935,6 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 1393451546}
   text: {fileID: 680660981}
+  hasDelay: 0
   isContinue: 0
 --- !u!1 &693520270
 GameObject:
@@ -1097,7 +1099,7 @@ RectTransform:
   - {fileID: 680660980}
   - {fileID: 1393451549}
   m_Father: {fileID: 199815905}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1203,7 +1205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &814258582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1218,7 +1220,7 @@ RectTransform:
   - {fileID: 1514571146}
   - {fileID: 966294889}
   m_Father: {fileID: 199815905}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1436,6 +1438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 134023808}
   text: {fileID: 1075425072}
+  hasDelay: 0
   isContinue: 1
 --- !u!114 &1075425072
 MonoBehaviour:
@@ -1591,7 +1594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: edba368ec06975f46ad7c965985bfabc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6972ef1046e7f7e46b0889c376d98017, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1758,6 +1761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 168406318}
   text: {fileID: 1321664646}
+  hasDelay: 0
   isContinue: 0
 --- !u!1 &1325794042
 GameObject:
@@ -1908,6 +1912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 589558826}
   text: {fileID: 1325794044}
+  hasDelay: 0
   isContinue: 0
 --- !u!1 &1389282769
 GameObject:
