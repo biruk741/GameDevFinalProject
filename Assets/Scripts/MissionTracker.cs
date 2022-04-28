@@ -38,7 +38,10 @@ public class MissionTracker
         TALK_TO_JADYN,
         PLAY_BASKETBALL,
         TALK_TO_JADYN2,
-        LEAVE_CSC
+        LEAVE_CSC,
+        GO_TO_TUNNEL,
+        FIND_STUDY_GUIDE,
+        END_GAME
 
 
 
