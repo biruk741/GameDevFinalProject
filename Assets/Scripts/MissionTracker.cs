@@ -76,9 +76,9 @@ public class MissionTracker
 
 #if UNITY_EDITOR
     [UnityEditor.MenuItem("Tools/Reset Player Prefs")]
+#endif
     public static void ResetStats()
     {
         PlayerPrefs.DeleteAll();
     }
-#endif
 }
