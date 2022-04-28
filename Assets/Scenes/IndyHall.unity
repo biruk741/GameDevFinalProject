@@ -7628,7 +7628,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 1
+  m_wordSpacing: 10
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -12942,7 +12942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: goToScene
-      value: Pong
+      value: PongGame
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
