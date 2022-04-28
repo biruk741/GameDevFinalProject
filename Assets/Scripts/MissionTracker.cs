@@ -33,7 +33,13 @@ public class MissionTracker
         TALK_TO_CA,
         PLAY_PING_PONG,
         TALK_TO_CA2,
-        LEAVE_INDY
+        LEAVE_INDY,
+        GO_TO_CSC,
+        TALK_TO_JADYN,
+        PLAY_BASKETBALL,
+        TALK_TO_JADYN2,
+        LEAVE_CSC
+
 
 
     }
