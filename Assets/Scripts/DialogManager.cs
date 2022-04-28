@@ -14,6 +14,8 @@ public class DialogManager : MonoBehaviour
 	private Dialogue dialogue;
 	public bool dialogueEnd;
 
+	private bool isOpen = false;
+
 	// Use this for initialization
 
 
@@ -31,6 +33,8 @@ public class DialogManager : MonoBehaviour
 		}
 
 		DisplayNextSentence();
+
+		isOpen = true;
 	}
 
 	public void DisplayNextSentence()
@@ -58,9 +62,17 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
-	void EndDialogue()
+    private void Update()
+    {
+		if (isOpen && Input.GetKeyDown(KeyCode.Space)) {
+			DisplayNextSentence();
+		}
+    }
+
+    void EndDialogue()
 	{
 		animator.SetBool("isOpen", false);
 		dialogueEnd = true;
+		isOpen = false;
 	}
 }

@@ -18,6 +18,11 @@ TagManager:
   - purplelocation
   - greenlocation
   - AudioSource
+  - Goal
+  - Ball
+  - Edge
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

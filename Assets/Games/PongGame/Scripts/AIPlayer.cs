@@ -20,20 +20,21 @@ public class AIPlayer : MonoBehaviour
     void Update()
 
     {
-        print(transform.position.y);
-        if (Ball.transform.position.y < transform.position.y || Ball.transform.position.y > transform.position.y
-            && transform.position.y < maxY && transform.position.y > minY)
+        if (PongManager.pongManager.GameEnd == false)
         {
-            var position = new Vector3(120f, Ball.transform.position.y, 0);
-            transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
-        }
-        else
-        {
+            if (Ball.transform.position.y < transform.position.y || Ball.transform.position.y > transform.position.y
+                && transform.position.y < maxY && transform.position.y > minY)
+            {
+                var position = new Vector3(120f, Ball.transform.position.y, 0);
+                transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
+            }
+            else
+            {
 
-            var position = new Vector3(120f, Ball.transform.position.y, 0);
-            transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
+                var position = new Vector3(120f, Ball.transform.position.y, 0);
+                transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * speed);
+            }
         }
-
     }
 
 }
