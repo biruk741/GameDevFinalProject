@@ -2029,7 +2029,7 @@ GameObject:
   - component: {fileID: 404247760}
   - component: {fileID: 404247758}
   m_Layer: 0
-  m_Name: Cookie
+  m_Name: Isabelle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2047,9 +2047,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a94111143cec39489d9d36107e791e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 5
-  speed: 40
-  walkingSound: {fileID: 0}
+  talkingSound: {fileID: 0}
+  NPCNameField: {fileID: 0}
+  NPCDialogField: {fileID: 0}
+  wholeDialogue: {fileID: 0}
+  sentences: []
+  NPCName: 
 --- !u!50 &404247760
 Rigidbody2D:
   serializedVersion: 4
@@ -4309,7 +4312,7 @@ PrefabInstance:
       objectReference: {fileID: 1703106167}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -4373,7 +4376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 8
+      value: Level 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -8644,7 +8647,7 @@ PrefabInstance:
       objectReference: {fileID: 1703106167}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -8708,7 +8711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 6
+      value: Level 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -9223,7 +9226,7 @@ PrefabInstance:
       objectReference: {fileID: 1703106167}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -9287,7 +9290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 7
+      value: Level 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -9333,6 +9336,7 @@ MonoBehaviour:
   nameText: {fileID: 420044056}
   dialogueText: {fileID: 647869195}
   animator: {fileID: 678220275}
+  dialogueEnd: 0
 --- !u!4 &1175844471
 Transform:
   m_ObjectHideFlags: 0
@@ -20858,7 +20862,7 @@ PrefabInstance:
       objectReference: {fileID: 1703106167}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -20922,7 +20926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 5
+      value: Level 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -20981,7 +20985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9447
+      value: 16.8
       objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_LocalPosition.z

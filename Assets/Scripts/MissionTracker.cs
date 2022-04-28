@@ -7,6 +7,7 @@ public class MissionTracker
     public enum LEVEL {
         TALK_TO_COOKIE,
         TALK_TO_DANTE,
+        PLAY_MATCHING,
         TALK_TO_DANTE_2,
         GO_TO_STUDENT_CENTER,
         TALK_TO_ISABELLE,
@@ -32,6 +33,8 @@ public class MissionTracker
         TALK_TO_CA,
         PLAY_PING_PONG,
         TALK_TO_CA2,
+        LEAVE_INDY
+
 
     }
     private static MissionTracker _instance;

@@ -949,7 +949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -957,75 +957,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: 2Hellloooo?
+      value: 1Hello
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: 1Hello?
-      objectReference: {fileID: 0}
-    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
       value: 2Can I help you?
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[4]
+      propertyPath: dialogue.sentences.Array.data[3]
       value: 1Umm, your roommate Isabelle told me you might know something about
         the mystical study guide?
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[5]
+      propertyPath: dialogue.sentences.Array.data[4]
       value: "2THAT MYTH, HA! No, I don\u2019t know anything about it"
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[6]
+      propertyPath: dialogue.sentences.Array.data[5]
       value: "1*Dang, she doesn\u2019t know*"
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[7]
+      propertyPath: dialogue.sentences.Array.data[6]
       value: '2To be honest, I think you''re on a wild goose chase. '
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[8]
+      propertyPath: dialogue.sentences.Array.data[7]
       value: '2However, the archives just got a new collection over there. '
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[9]
+      propertyPath: dialogue.sentences.Array.data[8]
       value: '2I think I saw some random piece of paper at the bottom of the pile. '
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[10]
+      propertyPath: dialogue.sentences.Array.data[9]
       value: "2Didn\u2019t look like it belonged to the collection."
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[11]
+      propertyPath: dialogue.sentences.Array.data[10]
       value: 2Tell you what you organize those books for me and you can have that
         piece of paper
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[12]
+      propertyPath: dialogue.sentences.Array.data[11]
       value: 1Seems like an excuse for you to get out of work
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[13]
+      propertyPath: dialogue.sentences.Array.data[12]
       value: "2Look, I\u2019ve spent the last three weeks cataloging old academic
         articles. "
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[14]
+      propertyPath: dialogue.sentences.Array.data[13]
       value: "2I probably won\u2019t be able to touch that pile for another three
         weeks. "
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[15]
+      propertyPath: dialogue.sentences.Array.data[14]
       value: 2You can either wait till I take care of it, or you can do it now
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[16]
+      propertyPath: dialogue.sentences.Array.data[15]
       value: 1*This is definitely extortion.*
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
-      propertyPath: dialogue.sentences.Array.data[17]
+      propertyPath: dialogue.sentences.Array.data[16]
       value: "2Fine, I\u2019ll take care of it"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[17]
+      value: 2*This study guide better be worth it*
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[18]
@@ -1037,7 +1037,7 @@ PrefabInstance:
       objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -1101,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 10
+      value: Level 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -2587,6 +2587,8 @@ MonoBehaviour:
   playerCollider: {fileID: 510725788}
   UIText: {fileID: 0}
   sceneName: OutdoorsScene
+  isIndoors: 0
+  speedDecreaseFactor: 0.1
 --- !u!61 &510725788
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10551,7 +10553,7 @@ GameObject:
   - component: {fileID: 1038983349}
   - component: {fileID: 1038983348}
   m_Layer: 0
-  m_Name: Cookie
+  m_Name: Ashley
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10569,9 +10571,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a94111143cec39489d9d36107e791e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 5
-  speed: 40
-  walkingSound: {fileID: 0}
+  talkingSound: {fileID: 0}
+  NPCNameField: {fileID: 0}
+  NPCDialogField: {fileID: 0}
+  wholeDialogue: {fileID: 0}
+  sentences: []
+  NPCName: 
 --- !u!50 &1038983349
 Rigidbody2D:
   serializedVersion: 4
@@ -10659,7 +10664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1800657806909718875, guid: 447db527aa8344649834af742c45d74f, type: 3}
+  m_Sprite: {fileID: -8669528547411810578, guid: 47de6c91610773a4f8d7f38fcf09646b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10984,6 +10989,7 @@ MonoBehaviour:
   nameText: {fileID: 1096741679}
   dialogueText: {fileID: 1771439020}
   animator: {fileID: 677084763}
+  dialogueEnd: 0
 --- !u!4 &1170923599
 Transform:
   m_ObjectHideFlags: 0
@@ -11375,7 +11381,7 @@ PrefabInstance:
       objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -11439,7 +11445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 13
+      value: Level 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -12146,7 +12152,7 @@ PrefabInstance:
       objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -12210,7 +12216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 12
+      value: Level 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
@@ -12353,7 +12359,7 @@ PrefabInstance:
       objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -12417,7 +12423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_Name
-      value: Level 11
+      value: Level 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
