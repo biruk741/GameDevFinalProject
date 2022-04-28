@@ -12123,7 +12123,7 @@ PrefabInstance:
       objectReference: {fileID: 550117368}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -12291,7 +12291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: goToScene
-      value: Book
+      value: BookGame
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
@@ -12734,7 +12734,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 1
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0

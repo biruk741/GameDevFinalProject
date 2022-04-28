@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 1
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -20822,6 +20822,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: OutdoorsScene
       objectReference: {fileID: 0}
+    - target: {fileID: 268969176670123997, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -20844,7 +20848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.8
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_LocalPosition.z
