@@ -980,6 +980,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1862353820}
     m_Modifications:
+    - target: {fileID: 8443965823149262928, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_LocalPosition.x
       value: 303.3
@@ -2120,7 +2124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: goToScene
-      value: PianoGame
+      value: PongGame
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
