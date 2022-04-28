@@ -8,7 +8,8 @@ public class basketball : MonoBehaviour
     bool hasCollided = false;
     public bool hitRim;
     public AudioSource groundSound;
-
+    public AudioSource backboardSound;
+    public AudioSource rimSound;
     public static basketball GetBasketball { get; private set; }
 
 
@@ -41,6 +42,10 @@ public class basketball : MonoBehaviour
         if (collision.gameObject.name == "Ground") {
             groundSound.Play();
         }
+        if (collision.gameObject.name == "backboard")
+        {
+            backboardSound.Play();
+        }
         if (collision.gameObject.name == "Ground" && hasCollided == false)
         {
             hasCollided = true;
@@ -67,6 +72,13 @@ public class basketball : MonoBehaviour
                     Shoot.ShootBall.EndGame();
                 }
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "outsiderim")
+        {
+            rimSound.Play();
         }
     }
 

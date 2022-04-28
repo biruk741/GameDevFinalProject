@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -23,16 +24,24 @@ public class GameOverScreen : MonoBehaviour
                     dialogbox.SetActive(true);
                     var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
                     dialogtext.text = "WOW YOU ARE AMAZING";
-                }
+                    GameObject.Find("Play Again").SetActive(false);
+                    StartCoroutine(WaitForSceneLoad());
+
+        }
         else
         {
-            winnerPraise.GetComponent<Text>().text = "You  Lose";
+            winnerPraise.GetComponent<TextMeshProUGUI>().text = "You Lose";
             winnerPraise.Visible = true;
             dialogbox.SetActive(true);
             var dialogtext = GameObject.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = "TRY AGAIN";
         }
     }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("HFAPracRoomScene");
 
-    
+    }
+
 }

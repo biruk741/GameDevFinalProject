@@ -7,7 +7,7 @@ using TMPro;
 public class gameController : MonoBehaviour
 {
     public GameObject box;
-    public Text clickCountTxt;
+    public TextMeshProUGUI clickCountTxt;
     List<int> frontList = new List<int>{ 0, 1, 2, 3, 0, 1, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11};
 public static System.Random rnd = new System.Random();
     public int shuffleIndex = 0;
@@ -24,7 +24,7 @@ public static System.Random rnd = new System.Random();
     private int clickCount = 0;
     float Scale = 4;
     int index = 0;
-    public Text winnerPraised;
+    public GameObject winnerPraised;
     public Button playAgain;
     float xPosition = -15f;
     float changeX = 10f;
@@ -65,8 +65,8 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-10.21f, -23.69f, -4268f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 14.ToString();
-        clickCountTries = 14;
+        dialogtext.text = "Try To Get Less Than or Equal To " + 20.ToString();
+        clickCountTries = 20;
         StartGame();
     }
 
@@ -84,8 +84,8 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-23.4f, -21.8f, -4268.07f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 10.ToString();
-        clickCountTries = 10;
+        dialogtext.text = "Try To Get Less Than or Equal To " + 14.ToString();
+        clickCountTries = 14;
         StartGame();
     }
 
@@ -97,8 +97,8 @@ public static System.Random rnd = new System.Random();
         //dialog.transform. = new Vector3(-170f, -127.2f, 0f);
         startCount = numOfPictures;
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Win By Matching Cards With A Click Score <= " + 6.ToString();
-        clickCountTries = 6;
+        dialogtext.text = "Try To Get Less Than or Equal To " + 8.ToString();
+        clickCountTries = 8;
         StartGame();
     }
 
@@ -208,11 +208,14 @@ public static System.Random rnd = new System.Random();
                 {
                     Destroy(obj);
                 }
-                var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-                dialogtext.text = "You Won";
-                beforeGameStartsAudio.Stop();
-                winnerPraised.GetComponent<ElementVisible>().Visible = true;
-                playAgain.GetComponent<ElementVisible>().Visible = true;
+                if (clickCount <= clickCountTries) {
+                    var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
+                    dialogtext.text = "Wow You Actually Won";
+                    beforeGameStartsAudio.Stop();
+                    StartCoroutine(WaitForSceneLoad());
+                    winnerPraised.GetComponent<ElementVisible>().Visible = true;
+
+                }
 
 
             }
@@ -227,7 +230,7 @@ public static System.Random rnd = new System.Random();
             var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
             dialogtext.text = "Try Again";
             beforeGameStartsAudio.Stop();
-            winnerPraised.GetComponent<Text>().text = "Try Again";
+            winnerPraised.GetComponent<TextMeshProUGUI>().text = "You Lose";
             winnerPraised.GetComponent<ElementVisible>().Visible = true;
             playAgain.GetComponent<ElementVisible>().Visible = true;
         }
@@ -235,5 +238,11 @@ public static System.Random rnd = new System.Random();
     public void PlayAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private IEnumerator WaitForSceneLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("OutdoorsScene");
+
     }
 }

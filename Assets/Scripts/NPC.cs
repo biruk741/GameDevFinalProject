@@ -4,39 +4,34 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    public enum CharacterState { 
-        WALKING_UP, WALKING_DOWN,WALKING_LEFT,WALKING_RIGHT,
-        FACING_UP, FACING_DOWN, FACING_LEFT, FACING_RIGHT
-    }
+    public AudioSource talkingSound;
 
-    public CharacterState currentState = CharacterState.FACING_DOWN;
-    private Animator animator;
-    public float speed = 40;
-    public AudioSource walkingSound;
+    public TMPro.TMP_Text NPCNameField;
+    public TMPro.TMP_Text NPCDialogField;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject wholeDialogue;
+
+    public string[] sentences;
+    public string NPCName;
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        animator = GetComponent<Animator>();
-        currentState = CharacterState.FACING_DOWN;
+        if (collision.gameObject.CompareTag("Player")) {
+            wholeDialogue.SetActive(true);
+            NPCNameField.text = NPCName;
+            if(sentences.Length > 0)
+            NPCDialogField.text = sentences[Random.Range(0, sentences.Length)];
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
-        print(currentState);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            wholeDialogue.SetActive(false);
 
-        //animator.SetInteger("CharacterState", (int) currentState);
+        }
     }
-    public void moveCharacter(CharacterState currentState, Transform transform, float speed) {
-        Vector3 pos = transform.position;
-        pos =
-                currentState == CharacterState.WALKING_UP ? new Vector3(pos.x, pos.y + speed * Time.deltaTime, pos.z) :
-                currentState == CharacterState.WALKING_DOWN ? new Vector3(pos.x, pos.y - speed * Time.deltaTime, pos.z) :
-                currentState == CharacterState.WALKING_LEFT ? new Vector3(pos.x - speed * Time.deltaTime, pos.y, pos.z) :
-                currentState == CharacterState.WALKING_RIGHT ? new Vector3(pos.x + speed * Time.deltaTime, pos.y, pos.z) : Vector3.zero;
-        transform.position = pos;
-        if(!walkingSound.isPlaying) walkingSound.Play();
-    }
+
 }

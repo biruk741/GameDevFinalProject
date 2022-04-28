@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/MemoryGame/MemoryGame.unity
     guid: 5c14e3e1300342e459fb6066c565dceb
+  - enabled: 1
+    path: Assets/Scenes/CSCGym.unity
+    guid: 003a33be786c3e84a977cf1e336fceee
   m_configObjects: {}
