@@ -1034,10 +1034,10 @@ PrefabInstance:
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -2621,7 +2621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510725786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.773, y: -2.168, z: -0.79155713}
+  m_LocalPosition: {x: 0.9, y: -2.16, z: -0.79155713}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11251,6 +11251,252 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1399982504
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1517135476}
+    m_Modifications:
+    - target: {fileID: 8443965823149262929, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823149262929, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 293.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -280.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.character1Name
+      value: Ashley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 2I found it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "1It? Huh, so it\u2019s as real as the fanfiction about Michelle Behr
+        and Buffy the Vampire Slayer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "\u201C2Excuse me?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: 1Well you got your study guide, hope it was worth it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: "2This isn\u2019t a study guide"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: "1That\u2019s probably because it doesn\u2019t exist"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: "2But it\u2019s a note from Marcus! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: '2Studying to do:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: 2Chemistry- Chp. 4-5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[9]
+      value: 2WLA- paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[10]
+      value: 2Intro to Philosophy- Chp. 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[11]
+      value: 2Practice Piano all week, HFA room 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[12]
+      value: 2-Marcus D.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[13]
+      value: 2You think that it's in the HFA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[14]
+      value: 1I think this Marcus person had to practice the piano for a grade, and
+        nothing else.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[15]
+      value: "1But if you really want to waste your time with this, it wouldn\u2019t
+        hurt to go and check it out"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[16]
+      value: "2Yeah, I\u2019ll head there and look around check it out"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[17]
+      value: 1Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: dialogue.sentences.Array.data[18]
+      value: 2*This study guide better be worth it*
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: goToScene
+      value: OutdoorsScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 1719238346}
+    - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: level
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: levelDestination
+      value: 
+      objectReference: {fileID: 1399982506}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 248.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -132.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965824110567748, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: m_Name
+      value: Level 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af03e853319e7814795c9f0009614338, type: 3}
+--- !u!4 &1399982505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8443965824110567747, guid: af03e853319e7814795c9f0009614338, type: 3}
+  m_PrefabInstance: {fileID: 1399982504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1399982506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
+  m_PrefabInstance: {fileID: 1399982504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1416653927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416653929}
+  - component: {fileID: 1416653928}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1416653928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416653927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92783514712c529498ff7bdf804ccf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 79895690}
+--- !u!4 &1416653929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416653927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -245.7966, y: 107.76932, z: -1.2259288}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470995091
 GameObject:
   m_ObjectHideFlags: 0
@@ -11437,6 +11683,7 @@ Transform:
   - {fileID: 305580967}
   - {fileID: 1786522551}
   - {fileID: 1782000291}
+  - {fileID: 1399982505}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11574,6 +11821,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719238344}
   m_CullTransparentMesh: 1
+--- !u!1 &1758851444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1758851447}
+  - component: {fileID: 1758851446}
+  - component: {fileID: 1758851445}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1758851445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758851444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1758851446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758851444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1758851447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758851444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771439018
 GameObject:
   m_ObjectHideFlags: 0
@@ -11755,7 +12068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: "\u201C2Excuse me?"
+      value: 2Excuse me?
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
@@ -11825,15 +12138,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: goToScene
-      value: BookGame
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 4
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -11932,11 +12245,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -230
+      value: -225.8
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823299733164, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443965823299733166, guid: af03e853319e7814795c9f0009614338, type: 3}
+      propertyPath: isDialogue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.character1Name
@@ -12033,10 +12350,10 @@ PrefabInstance:
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1719238346}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: level
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8443965824110567746, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: levelDestination
@@ -12289,7 +12606,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1170923598}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
