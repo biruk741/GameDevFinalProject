@@ -130,6 +130,8 @@ public class Spawn : MonoBehaviour
         yield return new WaitForSeconds(1);
         dialogtext.text = "Press All Black Keys With No Mistakes To Win";
         yield return new WaitForSeconds(2);
+        dialogtext.text = "Or Press 20 Notes";
+        yield return new WaitForSeconds(2);
         startGame.Visible = false;
         GameStarted = true;
         yield return null;

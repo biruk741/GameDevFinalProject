@@ -65,6 +65,11 @@ public class noteaction : MonoBehaviour
                         Spawn.Instance.lastNote = true;
                         Spawn.Instance.PlayerWon = true;
                         StartCoroutine(Spawn.Instance.EndGame());
+                    } else if (Id == 20)
+                    {
+                        Spawn.Instance.lastNote = true;
+                        Spawn.Instance.PlayerWon = true;
+                        StartCoroutine(Spawn.Instance.EndGame());
                     }
                 }
             }
