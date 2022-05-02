@@ -13497,7 +13497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
@@ -13519,11 +13519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: 2Yes, it does. Thank you!
+      value: 2Yes, Thank you!
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: 1You have to beat me in a game of ping pong.
+      value: 2*Wait didn't he play tennis, maybe it's there*
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[6]
