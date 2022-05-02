@@ -37,12 +37,7 @@ public class MainMenu : MonoBehaviour
 
             ContinueButton.onClick.AddListener(() => SceneManager.LoadScene("OutdoorsScene"));
         if (SkipStoryButton != null)
-            WaitForSecondsRealtime(3);
             SkipStoryButton.onClick.AddListener(() => SceneManager.LoadScene("OutdoorsScene"));
     }
 
-    private void WaitForSecondsRealtime(int v)
-    {
-        throw new NotImplementedException();
-    }
 }
