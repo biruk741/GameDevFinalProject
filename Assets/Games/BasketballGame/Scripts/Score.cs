@@ -38,6 +38,10 @@ public class Score : MonoBehaviour
         var number = int.Parse(clickCountTxt.text.ToString());
         number = number + 1;
         clickCountTxt.text = number.ToString();
+        if (number == 17)
+        {
+            Shoot.ShootBall.EndGame();
+        }
         Shoot.ShootBall.numberOfBalls = Shoot.ShootBall.numberOfBalls - 1;
         PlusOnePoint.SetActive(true);
         Wait(0.5f, () =>
