@@ -780,6 +780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Entrance
       objectReference: {fileID: 0}
+    - target: {fileID: 268969176670123986, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 268969176670123998, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: m_RootOrder
       value: 3
