@@ -1884,16 +1884,15 @@ MonoBehaviour:
   winText: {fileID: 1727062957}
   GameEnd: 0
   dialoguearray:
-  - You Are Good
-  - You Might Beat Me In Pong
-  - Have You Practiced Before
+  - Damn youre so good!
+  - You might actually beat me
+  - This cant be your first time
   - You Know How To Hold A Paddle
-  - You Have An Amazing Stance
+  - Youve got one hell of a good stance
   - You Show No Weaknesses
   - Are You On A Pong Team
   - Have You Played Before
   - Your Swings Are Powerful
-  - You Are So Focused
   dialog: {fileID: 165853574}
   maxScore: 5
 --- !u!82 &1107690559
