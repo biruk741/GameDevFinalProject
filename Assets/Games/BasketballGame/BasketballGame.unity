@@ -470,16 +470,11 @@ MonoBehaviour:
   counter: 1
   text:
   - Keep Shooting
-  - You Are A Natural
-  - Have Long Have You Played Basketball
+  - You're a Natural
+  - Have you played basketball before?
   - Maybe You Should Join The Team
-  - Have You Practiced Before
-  - Keep Making Your Shots
-  - Have You Played Before
   - Your Form Is Great
-  - You Shoot The Ball Well
-  - What Position Do You Play
-  - Such Range
+  - Nice Shot
   netSound: {fileID: 210586542}
 --- !u!82 &210586542
 AudioSource:

@@ -2668,11 +2668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[15]
-      value: "1Fine, I\u2019ll take care of it"
+      value: "2Fine, I\u2019ll take care of it"
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[16]
-      value: 1*This study guide better be worth it*
+      value: 2*This study guide better be worth it*
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269763, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: interactText
@@ -10595,7 +10595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[15]
-      value: 2You think that it's in the HFA
+      value: 2You think that it's in the HFA?
       objectReference: {fileID: 0}
     - target: {fileID: 8443965823889269761, guid: af03e853319e7814795c9f0009614338, type: 3}
       propertyPath: dialogue.sentences.Array.data[16]
