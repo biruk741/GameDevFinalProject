@@ -65,7 +65,7 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-10.21f, -23.69f, -4268f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Try To Get Less Than or Equal To " + 20.ToString();
+        dialogtext.text = "Go For " + 20.ToString() + " Attempts";
         clickCountTries = 20;
         StartGame();
     }
@@ -84,7 +84,7 @@ public static System.Random rnd = new System.Random();
         startCount = numOfPictures;
         GameObject.Find("NPC").transform.position = new Vector3(-23.4f, -21.8f, -4268.07f);
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Try To Get Less Than or Equal To " + 14.ToString();
+        dialogtext.text = "Go For " + 14.ToString() + " Attempts";
         clickCountTries = 14;
         StartGame();
     }
@@ -97,7 +97,7 @@ public static System.Random rnd = new System.Random();
         //dialog.transform. = new Vector3(-170f, -127.2f, 0f);
         startCount = numOfPictures;
         var dialogtext = dialog.transform.Find("BodyText").GetComponent<TextMeshProUGUI>();
-        dialogtext.text = "Try To Get Less Than or Equal To " + 8.ToString();
+        dialogtext.text = "Go For " + 8.ToString() + " Attempts";
         clickCountTries = 8;
         StartGame();
     }
@@ -175,7 +175,7 @@ public static System.Random rnd = new System.Random();
                cardUp1.index != cardUp2.index)
         {
             clickCount++;
-            clickCountTxt.text = "Click Score: " + clickCount.ToString();
+            clickCountTxt.text = "Attempts: " + clickCount.ToString();
             if (clickCount / textShow == 1)
             {
                 textShow = textShow + 2;
@@ -189,7 +189,7 @@ public static System.Random rnd = new System.Random();
             cardUp1.index == cardUp2.index)
         {
             clickCount++;
-            clickCountTxt.text = "Click Score: " + clickCount.ToString();
+            clickCountTxt.text = "Attempts: " + clickCount.ToString();
             cardUp1.matched = true;
             cardUp2.matched = true;
             cardUp1 = null;

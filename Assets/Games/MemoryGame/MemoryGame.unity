@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Click Score: 0'
+  m_text: 'Attempts: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1d65c26b0792f394fb20b03dd88fc66c, type: 2}
   m_sharedMaterial: {fileID: 3823111081708435838, guid: 1d65c26b0792f394fb20b03dd88fc66c, type: 2}
@@ -1483,12 +1483,12 @@ MonoBehaviour:
   text:
   - You Are Good
   - Keep Going
-  - Wow You Are Matching Them Quickly
+  - Wow You Are Quick
   - You Must Be A Prodigy
   - Have You Played Before
-  - You Are Too Good
+  - Damn okay okay
   - You Are Going Fast
-  - Must Have A Good Memory
+  - You Must Have A Good Memory
   - So Skilled
   - Almost Done
   - Keep The Score Low

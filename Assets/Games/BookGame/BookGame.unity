@@ -376,8 +376,7 @@ MonoBehaviour:
   - Keep Dropping Books In The Correct Spots
   - You Are Doing Great
   - You Are A Natural
-  - Maybe You Can Work At The Library
-  - Have You Worked In The Library Before
+  - You Should  Work At The Library
   - You Are Very Skilled
   - Great Job
   - Keep Going
@@ -459,8 +458,7 @@ MonoBehaviour:
   - Keep Dropping Books In The Correct Spots
   - You Are Doing Great
   - You Are A Natural
-  - Maybe You Can Work At The Library
-  - Have You Worked In The Library Before
+  - You Should  Work At The Library
   - You Are Very Skilled
   - Great Job
   - Keep Going
@@ -676,8 +674,7 @@ MonoBehaviour:
   - Keep Dropping Books In The Correct Spots
   - You Are Doing Great
   - You Are A Natural
-  - Maybe You Can Work At The Library
-  - Have You Worked In The Library Before
+  - You Should  Work At The Library
   - You Are Very Skilled
   - Great Job
   - Keep Going
@@ -2066,8 +2063,7 @@ MonoBehaviour:
   - Keep Dropping Books In The Correct Spots
   - You Are Doing Great
   - You Are A Natural
-  - Maybe You Can Work At The Library
-  - Have You Worked In The Library Before
+  - You Should  Work At The Library
   - You Are Very Skilled
   - Great Job
   - Keep Going
@@ -3009,14 +3005,11 @@ MonoBehaviour:
   - Keep Dropping Books In The Correct Spots
   - You Are Doing Great
   - You Are A Natural
-  - Maybe You Can Work At The Library
-  - Have You Worked In The Library Before
+  - You Should  Work At The Library
   - You Are Very Skilled
   - Great Job
-  - Wow You Know Where The Books Should Go
+  - Keep Going
   - Have You Done This Before
-  - Are You A Book Genius
-  - Have You Been Here Before
 --- !u!61 &1164086164
 BoxCollider2D:
   m_ObjectHideFlags: 0
