@@ -4802,7 +4802,7 @@ PrefabInstance:
     - target: {fileID: 268969176670123996, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: UIText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1806937874}
     - target: {fileID: 268969176670123996, guid: 71fc129ee8ddb204daa5ceaff5045e9c, type: 3}
       propertyPath: sceneName
       value: OutdoorsScene
